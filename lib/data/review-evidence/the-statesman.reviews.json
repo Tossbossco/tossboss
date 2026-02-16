@@ -11,6 +11,18 @@
       "source": "Apartments.com",
       "reviewDate": "2026-01-05",
       "tags": ["dumpster", "overflow"]
+    },
+    {
+      "textSnippet": "Great place but the trash pick up is inconsistent. Sometimes they come at 8pm, sometimes not until 11pm.",
+      "source": "Yelp",
+      "reviewDate": "2025-09-20",
+      "tags": ["valet", "inconsistent"]
+    },
+    {
+      "textSnippet": "Maintenance is fast, but the trash service needs work. Hallways smell because bags sit out too long.",
+      "source": "Google Reviews",
+      "reviewDate": "2025-12-15",
+      "tags": ["valet", "odor"]
     }
   ]
 }
