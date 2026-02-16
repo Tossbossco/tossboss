@@ -7,7 +7,7 @@
       "units": 252,
       "tier": null,
       "address": "1600 Ronald Reagan Blvd, Cumming, GA 30041",
-      "notes": "Initial recon initiated. Luxury complex managed by Harbor Group. High standard of amenities, but potential for valet service optimization.",
+      "notes": "Luxury complex managed by Harbor Group. \n\nSTRATEGY: 'Review Risk' Pitch. \nFound 4 specific resident complaints about inconsistent timing and weekend dumpster mess. \n\nNEXT MOVE: Walk-in Wednesday morning to deliver Spark Page link to Property Manager.",
       "contacts": [
         {
           "name": "Property Manager",
@@ -27,7 +27,7 @@
       "units": 240,
       "tier": null,
       "address": "2090 Columns Dr, Cumming, GA 30041",
-      "notes": "Luxury complex near Lake Lanier. Managed by ECI Management. High-end positioning makes them sensitive to hallway appearance and odor. Target for 'Luxury Standard' pitch.",
+      "notes": "Luxury complex near Lake Lanier. Managed by ECI Management. \n\nSTRATEGY: 'Maintenance Leakage' Pitch. \nSince public reviews are clean, focus on operational efficiency. Maintenance staff is likely losing 5-10 hours/week handling hallway trash and dumpster overflow. \n\nNEXT MOVE: Send Spark Page with focus on 'Recovered Maintenance Time'.",
       "contacts": [
         {
           "name": "Property Manager",
@@ -36,6 +36,26 @@
           "email": null,
           "lastContact": "—",
           "notes": "Researching specific manager name."
+        }
+      ],
+      "createdDate": "2026-02-16"
+    },
+    {
+      "id": "prop-arbors",
+      "name": "Arbors at Lake Lanier",
+      "status": "prospect",
+      "units": 180,
+      "tier": null,
+      "address": "1510 Arbors Cir, Cumming, GA 30041",
+      "notes": "Garden-style community near the lake. \n\nSTRATEGY: 'Convenience & Curb Appeal' Pitch. \nConfirmed: NO TRASH CHUTES. Residents must walk bags to central dumpsters. This leads to bags sitting on balconies/breezeways. \n\nNEXT MOVE: Send Spark Page highlighting 'Resident Convenience' and 'Zero Balcony Trash'.",
+      "contacts": [
+        {
+          "name": "Property Manager",
+          "role": "Decision Maker",
+          "phone": "(770) 781-9100",
+          "email": null,
+          "lastContact": "—",
+          "notes": "Target for 'No Chute' convenience pitch."
         }
       ],
       "createdDate": "2026-02-16"

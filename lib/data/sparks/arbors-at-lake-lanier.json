@@ -1,0 +1,23 @@
+{
+  "slug": "arbors-at-lake-lanier",
+  "businessName": "Arbors at Lake Lanier",
+  "units": 180,
+  "reviewRiskScan": {
+    "riskSignal": "Medium",
+    "mentionsCount": 3,
+    "mostCommonIssue": "Bags left in breezeways"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 68,
+    "dimensions": {
+      "reliability": 70,
+      "residentExperience": 62,
+      "issueResponse": 65,
+      "communication": 75
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 8600,
+    "maxAmount": 19500
+  }
+}

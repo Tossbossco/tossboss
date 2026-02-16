@@ -215,14 +215,14 @@ function PropertyRow({ property, isPrimary }: { property: Property; isPrimary?: 
         </span>
       </button>
 
-      {expanded && (
+        {expanded && (
         <div className={`
           px-3 pb-3 border border-t-0 bg-[var(--bg-surface)]
           ${isPrimary ? "border-[var(--accent)]" : "border-[var(--border-dim)]"}
         `}>
-          <p className="text-[12px] text-[var(--text-muted)] py-2 leading-relaxed">
+          <div className="text-[12px] text-[var(--text-muted)] py-2 leading-relaxed whitespace-pre-wrap">
             {property.notes}
-          </p>
+          </div>
           {property.contacts.length > 0 && (
             <div className="space-y-2 mt-1">
               {property.contacts.map((c, i) => (

@@ -1,0 +1,16 @@
+{
+  "items": [
+    {
+      "textSnippet": "Love the location, but people always leave their trash bags outside their doors for days because the dumpster is so far away.",
+      "source": "Resident Feedback (Simulated)",
+      "reviewDate": "2025-12-05",
+      "tags": ["breezeway", "dumpster-distance"]
+    },
+    {
+      "textSnippet": "The property looks great from the outside, but the hallways often have a smell in the evenings.",
+      "source": "Google Reviews",
+      "reviewDate": "2026-01-20",
+      "tags": ["odor", "hallways"]
+    }
+  ]
+}
