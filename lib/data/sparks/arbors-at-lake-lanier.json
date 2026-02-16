@@ -3,9 +3,9 @@
   "businessName": "Arbors at Lake Lanier",
   "units": 180,
   "reviewRiskScan": {
-    "riskSignal": "Medium",
-    "mentionsCount": 3,
-    "mostCommonIssue": "Bags left in breezeways"
+    "riskSignal": "Low",
+    "mentionsCount": 2,
+    "mostCommonIssue": "Hallway odors"
   },
   "vendorScorecard": {
     "provisionalScore": 68,
