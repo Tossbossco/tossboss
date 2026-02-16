@@ -1,6 +1,6 @@
 "use client";
 
-import type { Task, StoryMission, WeeklyMission, SideMission } from "@/lib/types";
+import type { Task, Property, StoryMission, WeeklyMission, SideMission } from "@/lib/types";
 import { useRouter } from "next/navigation";
 import { isOverdue } from "@/lib/utils";
 import {
