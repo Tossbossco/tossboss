@@ -50,7 +50,7 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
     switch (signal) {
       case "Critical": return "text-red-600 bg-red-50";
       case "Friction": return "text-amber-600 bg-amber-50";
-      default: return "text-[#5B7CE6] bg-blue-50";
+      default: return "text-[#2D5A45] bg-[#E8F5E9]";
     }
   };
 

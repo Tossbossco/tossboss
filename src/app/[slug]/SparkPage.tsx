@@ -72,7 +72,7 @@ export default function SparkPage({ spark }: SparkPageProps) {
                   <span className={
                     spark.reviewRiskScan.riskSignal === "Critical" ? "text-red-600" :
                     spark.reviewRiskScan.riskSignal === "Friction" ? "text-amber-600" :
-                    "text-[#5B7CE6]"
+                    "text-[#2D5A45]"
                   }>
                     {spark.reviewRiskScan.riskSignal}
                   </span>
