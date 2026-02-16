@@ -1,18 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap, useMapEvents } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 // Fix for default marker icons in Leaflet with Next.js
-const DefaultIcon = L.icon({
-  iconUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png",
-  shadowUrl: "https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png",
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
-});
-
 const ActiveIcon = L.divIcon({
   className: "custom-div-icon",
   html: `<div style="background-color: #34A853; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 10px #34A853;"></div>`,
@@ -46,12 +39,12 @@ const CUMMING_COMPLEXES: Property[] = [
   { name: "The Parc at 1312", units: 210, address: "1312 Pilgrim Rd, Cumming, GA 30040", lat: 34.225, lng: -84.145, phone: "(770) 889-1312", website: "https://www.theparcat1312.com/" },
   { name: "Retreat at Cumming", units: 192, address: "Cumming, GA 30040", lat: 34.210, lng: -84.155, phone: "(770) 887-1920", website: "https://www.retreatatcumming.com/" },
   { name: "The Residences at West Vickers", units: 144, address: "Cumming, GA 30040", lat: 34.205, lng: -84.160, phone: "(770) 205-1440", website: "https://www.residencesatwestvickers.com/" },
+  { name: "The Statesman", units: 252, address: "1600 Ronald Reagan Blvd, Cumming, GA 30041", lat: 34.178, lng: -84.142, phone: "(678) 658-3614", website: "https://www.harborgroupmanagement.com/apartments/ga/cumming/the-statesman/" },
 ];
 
 function MapEffect() {
   const map = useMap();
   useEffect(() => {
-    // Force a resize check to prevent gray tiles on load
     setTimeout(() => {
       map.invalidateSize();
     }, 100);
@@ -59,8 +52,17 @@ function MapEffect() {
   return null;
 }
 
+function MapEvents({ onMove }: { onMove: () => void }) {
+  useMapEvents({
+    moveend: () => onMove(),
+    zoomend: () => onMove(),
+  });
+  return null;
+}
+
 export default function TacticalMap({ properties }: { properties: any[] }) {
   const [isMounted, setIsMounted] = useState(false);
+  const [mapVersion, setMapVersion] = useState(0);
 
   useEffect(() => {
     setIsMounted(true);
@@ -80,7 +82,7 @@ export default function TacticalMap({ properties }: { properties: any[] }) {
         zoomControl={false}
       >
         <MapEffect />
-        {/* Tactical Dark Tiles */}
+        <MapEvents onMove={() => setMapVersion(v => v + 1)} />
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
           url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -90,7 +92,7 @@ export default function TacticalMap({ properties }: { properties: any[] }) {
           const isActive = activeNames.includes(p.name.toLowerCase());
           return (
             <Marker 
-              key={idx} 
+              key={`${idx}-${mapVersion}`} 
               position={[p.lat, p.lng]} 
               icon={isActive ? ActiveIcon : DiscoveredIcon}
             >
@@ -132,10 +134,9 @@ export default function TacticalMap({ properties }: { properties: any[] }) {
         })}
       </MapContainer>
 
-      {/* Map Controls UI Overlay */}
       <div className="absolute top-4 right-4 z-[1000] flex flex-col gap-2 pointer-events-none">
-        <div className="px-3 py-1.5 bg-black/60 backdrop-blur-md border border-white/10 text-[9px] text-white font-pixel tracking-widest">
-          SATELLITE_RECON_V1.0
+        <div className="px-3 py-1.5 bg-black/60 backdrop-blur-md border border-white/10 text-[9px] text-white font-pixel tracking-widest uppercase">
+          Tactical_Grid_v1.1 | {CUMMING_COMPLEXES.length}_Targets
         </div>
       </div>
     </div>
