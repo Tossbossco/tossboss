@@ -64,20 +64,20 @@ export default function SparkPage({ spark }: SparkPageProps) {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {/* Finding 1: Risk */}
+            {/* Finding 1: Signal */}
             <ExternalCard>
               <ExternalMetric
-                label="Review Risk Signal"
+                label="Operational Health Scan"
                 value={
                   <span className={
-                    spark.reviewRiskScan.riskSignal === "High" ? "text-red-600" :
-                    spark.reviewRiskScan.riskSignal === "Medium" ? "text-amber-600" :
-                    "text-[#2D5A45]"
+                    spark.reviewRiskScan.riskSignal === "Critical" ? "text-red-600" :
+                    spark.reviewRiskScan.riskSignal === "Friction" ? "text-amber-600" :
+                    "text-[#5B7CE6]"
                   }>
                     {spark.reviewRiskScan.riskSignal}
                   </span>
                 }
-                helper={`${spark.reviewRiskScan.mentionsCount} relevant mentions in public reviews`}
+                helper={`${spark.reviewRiskScan.mentionsCount} trash-related mentions in public history`}
               />
             </ExternalCard>
 

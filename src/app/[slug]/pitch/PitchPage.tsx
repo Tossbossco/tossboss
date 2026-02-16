@@ -48,9 +48,9 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
 
   const getRiskColor = (signal: string) => {
     switch (signal) {
-      case "High": return "text-red-600 bg-red-50";
-      case "Medium": return "text-amber-600 bg-amber-50";
-      default: return "text-emerald-600 bg-emerald-50";
+      case "Critical": return "text-red-600 bg-red-50";
+      case "Friction": return "text-amber-600 bg-amber-50";
+      default: return "text-[#5B7CE6] bg-blue-50";
     }
   };
 
@@ -158,9 +158,9 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   <ExternalCard tone="soft" className={`rounded-xl ${getRiskColor(executiveSnapshot.residentFrictionSignal)}`}>
                     <ExternalMetric
-                      label="Resident Friction Signal"
-                      value={<span className="font-serif text-5xl">{executiveSnapshot.residentFrictionSignal}</span>}
-                      helper={`Based on ${reviewEvidence.length} relevant reviews`}
+                      label="Operational Health Signal"
+                      value={<span className="font-serif text-4xl">{executiveSnapshot.residentFrictionSignal}</span>}
+                      helper={`Based on ${reviewEvidence.length} all-time trash mentions`}
                     />
                   </ExternalCard>
 
@@ -199,9 +199,9 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 className="font-serif text-3xl lg:text-4xl text-[#1B4D3E]">
-                    What Residents Are Signaling
+                    Reputation Analysis
                   </h2>
-                  <p className="text-gray-600 mt-4">Evidence from public reviews (last 12 months)</p>
+                  <p className="text-gray-600 mt-4">Evidence from all-time public reviews</p>
                 </div>
                 
                 <div className="space-y-6">
@@ -240,8 +240,8 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                     </div>
                     <div className="mt-6 p-4 bg-gray-50 rounded-lg">
                       <p className="text-sm text-gray-600">
-                        <span className="font-medium">Method:</span> Analyzed {reviewEvidence.length} reviews across Google, Yelp, and ApartmentRatings. 
-                        Tagged by relevance to trash/sanitation issues and weighted by recency and severity.
+                        <span className="font-medium">Method:</span> Analyzed all-time reviews across Google, Yelp, and Apartments.com. 
+                        Tagged by relevance to trash/sanitation issues to identify long-term reputation patterns.
                       </p>
                     </div>
                   </ExternalCard>

@@ -3,7 +3,7 @@
   "businessName": "The Statesman",
   "units": 252,
   "reviewRiskScan": {
-    "riskSignal": "Medium",
+    "riskSignal": "Friction",
     "mentionsCount": 4,
     "mostCommonIssue": "Inconsistent pickup timing"
   },

@@ -7,7 +7,7 @@ export interface Spark {
   reviewRiskScan: {
     mentionsCount: number;
     mostCommonIssue: string;
-    riskSignal: "Low" | "Medium" | "High";
+    riskSignal: "Optimization" | "Friction" | "Critical";
   };
   vendorScorecard: {
     provisionalScore: number;
@@ -75,7 +75,7 @@ export interface PitchPageData {
   preparedDate: string;
   preparedFor: string;
   executiveSnapshot: {
-    residentFrictionSignal: "Low" | "Medium" | "High";
+    residentFrictionSignal: "Optimization" | "Friction" | "Critical";
     currentVendorPerformance: number;
     noiUpsideMin: number;
     noiUpsideMax: number;

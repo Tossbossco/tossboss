@@ -3,7 +3,7 @@
   "businessName": "The Columns at Pilgrim Mill",
   "units": 240,
   "reviewRiskScan": {
-    "riskSignal": "Low",
+    "riskSignal": "Optimization",
     "mentionsCount": 1,
     "mostCommonIssue": "Holiday dumpster overflow"
   },

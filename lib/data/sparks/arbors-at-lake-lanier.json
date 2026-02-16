@@ -3,7 +3,7 @@
   "businessName": "Arbors at Lake Lanier",
   "units": 180,
   "reviewRiskScan": {
-    "riskSignal": "Low",
+    "riskSignal": "Friction",
     "mentionsCount": 2,
     "mostCommonIssue": "Hallway odors"
   },
