@@ -20,6 +20,7 @@ export interface Player {
   lastDecayCheck: string;
   decayActive: boolean;
   joinedDate: string;
+  primaryTargetId?: string | null;
 }
 
 export interface CharacterStats {
