@@ -4,8 +4,8 @@
   "units": 240,
   "reviewRiskScan": {
     "riskSignal": "Low",
-    "mentionsCount": 2,
-    "mostCommonIssue": "Staff time spent on grounds cleanup"
+    "mentionsCount": 1,
+    "mostCommonIssue": "Holiday dumpster overflow"
   },
   "vendorScorecard": {
     "provisionalScore": 84,
