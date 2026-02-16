@@ -59,6 +59,26 @@
         }
       ],
       "createdDate": "2026-02-16"
+    },
+    {
+      "id": "prop-saddleview",
+      "name": "Saddleview Apartments",
+      "status": "prospect",
+      "units": 156,
+      "tier": null,
+      "address": "100 Saddleview Ct, Cumming, GA 30040",
+      "notes": "Garden-style community off Post Rd. \n\nSTRATEGY: 'Hidden Labor' Pitch. \nNo trash chutes found. Centralized dumpster layout. Pitch focuses on recovering maintenance staff time currently spent on grounds cleanup and dumpster area maintenance. \n\nNEXT MOVE: Send Spark Page with focus on 'Operational Efficiency'.",
+      "contacts": [
+        {
+          "name": "Property Manager",
+          "role": "Decision Maker",
+          "phone": "(770) 889-8800",
+          "email": null,
+          "lastContact": "—",
+          "notes": "Researching specific manager name."
+        }
+      ],
+      "createdDate": "2026-02-16"
     }
   ]
 }

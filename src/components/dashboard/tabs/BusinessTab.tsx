@@ -252,7 +252,7 @@ function PropertyRow({ property, isPrimary }: { property: Property; isPrimary?: 
           {/* Spark & Pitch Links */}
           <div className="mt-4 pt-3 border-t border-[var(--border-dim)] flex gap-2">
             <a 
-              href={`/${property.id === 'prop-statesman' ? 'the-statesman' : property.id === 'prop-columns' ? 'the-columns-at-pilgrim-mill' : property.id === 'prop-arbors' ? 'arbors-at-lake-lanier' : property.id.replace('prop-', '')}`}
+              href={`/${property.id === 'prop-statesman' ? 'the-statesman' : property.id === 'prop-columns' ? 'the-columns-at-pilgrim-mill' : property.id === 'prop-arbors' ? 'arbors-at-lake-lanier' : property.id === 'prop-saddleview' ? 'saddleview-apartments' : property.id.replace('prop-', '')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-accent/10 text-accent border border-accent/20 text-[11px] font-medium hover:bg-accent/20 transition-all"
@@ -261,7 +261,7 @@ function PropertyRow({ property, isPrimary }: { property: Property; isPrimary?: 
               SPARK_PAGE
             </a>
             <a 
-              href={`/${property.id === 'prop-statesman' ? 'the-statesman' : property.id === 'prop-columns' ? 'the-columns-at-pilgrim-mill' : property.id === 'prop-arbors' ? 'arbors-at-lake-lanier' : property.id.replace('prop-', '')}/pitch`}
+              href={`/${property.id === 'prop-statesman' ? 'the-statesman' : property.id === 'prop-columns' ? 'the-columns-at-pilgrim-mill' : property.id === 'prop-arbors' ? 'arbors-at-lake-lanier' : property.id === 'prop-saddleview' ? 'saddleview-apartments' : property.id.replace('prop-', '')}/pitch`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-white/5 text-secondary border border-white/10 text-[11px] font-medium hover:bg-white/10 transition-all"

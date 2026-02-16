@@ -1,0 +1,23 @@
+{
+  "slug": "saddleview-apartments",
+  "businessName": "Saddleview Apartments",
+  "units": 156,
+  "reviewRiskScan": {
+    "riskSignal": "Optimization",
+    "mentionsCount": 0,
+    "mostCommonIssue": "Maintenance staff over-functioning"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 88,
+    "dimensions": {
+      "reliability": 90,
+      "residentExperience": 85,
+      "issueResponse": 88,
+      "communication": 90
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 7500,
+    "maxAmount": 16800
+  }
+}
