@@ -1,0 +1,189 @@
+{
+  "achievements": [
+    {
+      "id": "first-call",
+      "name": "First Call",
+      "description": "Make your first sales call to a property manager",
+      "category": "hustle",
+      "xpReward": 100,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 1 }
+    },
+    {
+      "id": "dialer",
+      "name": "Dialer",
+      "description": "Make 10 sales calls",
+      "category": "hustle",
+      "xpReward": 100,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 10 }
+    },
+    {
+      "id": "cold-blooded",
+      "name": "Cold Blooded",
+      "description": "Make 25 sales calls",
+      "category": "hustle",
+      "xpReward": 150,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 25 }
+    },
+    {
+      "id": "persistent",
+      "name": "Persistent",
+      "description": "Make 50 sales calls",
+      "category": "hustle",
+      "xpReward": 250,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 50 }
+    },
+    {
+      "id": "streak-starter",
+      "name": "Streak Starter",
+      "description": "3-day streak",
+      "category": "hustle",
+      "xpReward": 50,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 3 }
+    },
+    {
+      "id": "on-fire",
+      "name": "On Fire",
+      "description": "7-day streak",
+      "category": "hustle",
+      "xpReward": 100,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 7 }
+    },
+    {
+      "id": "unstoppable",
+      "name": "Unstoppable",
+      "description": "14-day streak",
+      "category": "hustle",
+      "xpReward": 200,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 14 }
+    },
+    {
+      "id": "machine",
+      "name": "Machine",
+      "description": "30-day streak",
+      "category": "hustle",
+      "xpReward": 500,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 30 }
+    },
+    {
+      "id": "open-for-business",
+      "name": "Open for Business",
+      "description": "Complete business profile and launch website",
+      "category": "business",
+      "xpReward": 200,
+      "unlocked": false
+    },
+    {
+      "id": "in-the-door",
+      "name": "In the Door",
+      "description": "First meeting with a property manager decision maker",
+      "category": "business",
+      "xpReward": 200,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 1 }
+    },
+    {
+      "id": "first-contract",
+      "name": "First Contract",
+      "description": "Sign first property management contract",
+      "category": "business",
+      "xpReward": 500,
+      "unlocked": false
+    },
+    {
+      "id": "five-figures",
+      "name": "Five Figures",
+      "description": "$10,000 total revenue earned",
+      "category": "business",
+      "xpReward": 500,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 10000 }
+    },
+    {
+      "id": "loyal-base",
+      "name": "Loyal Base",
+      "description": "3 properties under contract",
+      "category": "business",
+      "xpReward": 300,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 3 }
+    },
+    {
+      "id": "full-route",
+      "name": "Full Route",
+      "description": "500+ units under management",
+      "category": "business",
+      "xpReward": 400,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 500 }
+    },
+    {
+      "id": "six-grand",
+      "name": "Six Grand",
+      "description": "Hit $6,000/month recurring revenue",
+      "category": "business",
+      "xpReward": 500,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 6000 }
+    },
+    {
+      "id": "brand-builder",
+      "name": "Brand Builder",
+      "description": "All core marketing assets created",
+      "category": "growth",
+      "xpReward": 150,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 4 }
+    },
+    {
+      "id": "digital-presence",
+      "name": "Digital Presence",
+      "description": "Website live with ROI calculator",
+      "category": "growth",
+      "xpReward": 150,
+      "unlocked": false
+    },
+    {
+      "id": "five-star",
+      "name": "Five Star",
+      "description": "First client testimonial or review",
+      "category": "growth",
+      "xpReward": 100,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 1 }
+    },
+    {
+      "id": "referral",
+      "name": "Referral",
+      "description": "Get referred to another property by an existing client",
+      "category": "growth",
+      "xpReward": 200,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 1 }
+    },
+    {
+      "id": "boss-move",
+      "name": "Boss Move",
+      "description": "Hire first valet",
+      "category": "growth",
+      "xpReward": 300,
+      "unlocked": false
+    },
+    {
+      "id": "franchise-ready",
+      "name": "Franchise Ready",
+      "description": "Systems documented for replication",
+      "category": "growth",
+      "xpReward": 500,
+      "unlocked": false,
+      "progress": { "current": 0, "target": 1 }
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "tasks": [
+    {
+      "id": "task-1",
+      "task": "Add first 3 target properties to pipeline",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-02-16",
+      "completed": false
+    },
+    {
+      "id": "task-2",
+      "task": "Define weekly outreach mission",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-02-16",
+      "completed": false
+    },
+    {
+      "id": "task-3",
+      "task": "Verify Formspree lead notification email",
+      "xpReward": 25,
+      "priority": "low",
+      "dueDate": "2026-02-16",
+      "completed": false
+    },
+    {
+      "id": "task-4",
+      "task": "Get haircut (prep for in-person meetings)",
+      "xpReward": 25,
+      "priority": "medium",
+      "dueDate": "2026-02-17",
+      "completed": false,
+      "category": "leadership"
+    }
+  ]
+}

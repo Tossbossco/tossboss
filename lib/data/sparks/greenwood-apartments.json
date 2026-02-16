@@ -1,0 +1,85 @@
+{
+  "slug": "greenwood-apartments",
+  "businessName": "Greenwood Apartments",
+  "units": 200,
+  "preparedFor": "Sarah Chen, Property Manager",
+  "preparedDate": "2026-02-15",
+  "reviewRiskScan": {
+    "mentionsCount": 12,
+    "mostCommonIssue": "Missed pickups on weekends",
+    "riskSignal": "Medium"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 68,
+    "confidence": "medium",
+    "dimensions": {
+      "reliability": 65,
+      "residentExperience": 70,
+      "issueResponse": 62,
+      "communication": 75
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 8400,
+    "maxAmount": 15600,
+    "assumptions": [
+      "Based on 200 units at $15/unit standard tier",
+      "Conservative estimates of complaint reduction",
+      "Operational efficiency gains from better processes"
+    ]
+  },
+  "reviewDeepDive": {
+    "recurringThemes": [
+      "Missed pickups, especially on weekends",
+      "Dumpster area cleanliness issues",
+      "Slow response to service complaints",
+      "Inconsistent resident communication"
+    ],
+    "frequencyAndRecency": "12 relevant mentions in last 12 months, with 4 in last 90 days showing recent concentration",
+    "impactOnReputation": "Trash service issues appear in 15% of all negative reviews, affecting overall property rating and resident satisfaction scores"
+  },
+  "vendorGaps": [
+    "Inconsistent weekend coverage leading to missed pickups",
+    "No proactive communication about service changes or delays",
+    "Slow issue resolution process (avg 3+ days)"
+  ],
+  "noiBreakdown": {
+    "currentLeakage": [
+      "Staff time handling resident complaints (est. 5 hrs/week)",
+      "Reputation impact on renewal rates",
+      "Operational drag from inconsistent service"
+    ],
+    "optimizedEconomics": [
+      "Reduced complaint handling time",
+      "Improved resident satisfaction and retention",
+      "Streamlined operations with reliable service"
+    ],
+    "scenarios": {
+      "conservative": 8400,
+      "base": 12000,
+      "upside": 15600
+    }
+  },
+  "switchPlan": {
+    "days1to3": [
+      "Kickoff meeting with property management team",
+      "Route planning and building access setup",
+      "Resident communication template preparation"
+    ],
+    "days4to7": [
+      "Resident notice distribution via email and physical",
+      "Office staff training on new processes",
+      "QR guide setup and testing"
+    ],
+    "days8to14": [
+      "Go-live with nightly service",
+      "Daily quality checks for first week",
+      "Rapid issue response protocol activation"
+    ],
+    "riskControls": [
+      "No-gap service transition with overlapping coverage",
+      "Daily supervisor check-ins during first 2 weeks",
+      "Immediate escalation path for any issues"
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "TossBoss",
+  "tagline": "Doorstep-to-dumpster valet trash service",
+  "location": "Cumming, GA",
+  "description": "Professional valet trash collection service for multi-family residential properties. Uniformed valets collect bagged trash from residents' doorsteps and transport to on-site dumpsters nightly.",
+  "services": [
+    {
+      "name": "Basic",
+      "frequency": "3-night",
+      "pricePerUnit": 13,
+      "description": "Sun/Tue/Thu collection"
+    },
+    {
+      "name": "Standard",
+      "frequency": "5-night",
+      "pricePerUnit": 15,
+      "description": "Sun-Thu collection",
+      "popular": true
+    },
+    {
+      "name": "Premium",
+      "frequency": "5-night + recycling",
+      "pricePerUnit": 17,
+      "description": "Sun-Thu collection with doorstep recycling"
+    }
+  ],
+  "addOns": [
+    "Doorstep recycling collection",
+    "Common area cleaning (+$1/door/month)",
+    "Quarterly dumpster deep cleaning",
+    "Trash bin provision"
+  ],
+  "targetMarket": "Multi-family residential properties (apartment complexes, condos) with 50-500+ units in North Georgia",
+  "corePromise": "Increase NOI and resident satisfaction. $10-20 net profit per unit monthly. #1 amenity residents want.",
+  "website": {
+    "url": "thetossboss.co",
+    "status": "live",
+    "lastUpdated": "2026-02-16"
+  },
+  "contact": {
+    "phone": "678-477-8717",
+    "email": "Tossbossllc@gmail.com"
+  },
+  "revenue": {
+    "monthlyRecurring": 0,
+    "totalEarned": 0,
+    "target": 6000
+  }
+}

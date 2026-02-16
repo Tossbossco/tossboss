@@ -1,0 +1,79 @@
+{
+  "_template": true,
+  "_description": "Template for creating new Spark packages. Copy this file, rename with property slug, and fill in all fields.",
+  "slug": "property-name-slug",
+  "businessName": "Property Full Name",
+  "units": 0,
+  "preparedFor": "Property Manager Name",
+  "preparedDate": "YYYY-MM-DD",
+  "reviewRiskScan": {
+    "mentionsCount": 0,
+    "mostCommonIssue": "Primary issue from reviews",
+    "riskSignal": "Medium"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 0,
+    "confidence": "medium",
+    "dimensions": {
+      "reliability": 0,
+      "residentExperience": 0,
+      "issueResponse": 0,
+      "communication": 0
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 0,
+    "maxAmount": 0,
+    "assumptions": [
+      "Assumption 1",
+      "Assumption 2"
+    ]
+  },
+  "reviewDeepDive": {
+    "recurringThemes": [
+      "Theme 1",
+      "Theme 2",
+      "Theme 3"
+    ],
+    "frequencyAndRecency": "Description of review frequency patterns",
+    "impactOnReputation": "Description of reputation impact"
+  },
+  "vendorGaps": [
+    "Gap 1",
+    "Gap 2",
+    "Gap 3"
+  ],
+  "noiBreakdown": {
+    "currentLeakage": [
+      "Leakage item 1",
+      "Leakage item 2"
+    ],
+    "optimizedEconomics": [
+      "Optimized item 1",
+      "Optimized item 2"
+    ],
+    "scenarios": {
+      "conservative": 0,
+      "base": 0,
+      "upside": 0
+    }
+  },
+  "switchPlan": {
+    "days1to3": [
+      "Kickoff task 1",
+      "Kickoff task 2"
+    ],
+    "days4to7": [
+      "Preparation task 1",
+      "Preparation task 2"
+    ],
+    "days8to14": [
+      "Go-live task 1",
+      "Go-live task 2"
+    ],
+    "riskControls": [
+      "Risk control 1",
+      "Risk control 2"
+    ]
+  }
+}

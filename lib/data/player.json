@@ -1,0 +1,25 @@
+{
+  "name": "Alan",
+  "businessName": "TossBoss",
+  "level": 3,
+  "title": "Soldier",
+  "xp": 500,
+  "xpToNextLevel": 600,
+  "totalXpEarned": 500,
+  "streak": {
+    "current": 1,
+    "longest": 1,
+    "lastActiveDate": "2026-02-16",
+    "multiplier": 1
+  },
+  "stats": {
+    "sales": 0,
+    "operations": 0,
+    "marketing": 0,
+    "finance": 0,
+    "leadership": 0
+  },
+  "lastDecayCheck": "",
+  "decayActive": false,
+  "joinedDate": "2026-02-16"
+}
