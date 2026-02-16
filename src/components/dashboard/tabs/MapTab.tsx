@@ -35,6 +35,7 @@ export default function MapTab({ properties, isMapActive }: MapTabProps) {
 
   const activeTerritory = properties.filter(p => p.status === "active" || p.status === "contract");
   const pipelineTerritory = properties.filter(p => p.status !== "active" && p.status !== "contract");
+  const primaryTarget = properties.find(p => p.id === "prop-statesman");
 
   return (
     <div className="space-y-10 fade-in">
@@ -50,8 +51,8 @@ export default function MapTab({ properties, isMapActive }: MapTabProps) {
         <Panel>
           <div className="text-label text-dim mb-1">PIPELINE_REACH</div>
           <div className="text-body font-medium text-primary flex items-center gap-2">
-            <Building2 size={14} className="text-dim" />
-            {pipelineTerritory.length} Properties
+            <Building2 size={14} className="text-[#5B7CE6]" />
+            {pipelineTerritory.length} Armed Prospects
           </div>
         </Panel>
       </section>
@@ -79,22 +80,36 @@ export default function MapTab({ properties, isMapActive }: MapTabProps) {
 
         <div className="space-y-3">
           {/* Active Properties in Map */}
-          {properties.map(p => (
-            <div key={p.id} className="group relative">
-              <Panel className="border-accent/30 bg-accent-glow/5 hover:border-accent transition-all">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_rgba(52,168,83,0.5)]" />
-                    <div>
-                      <div className="text-body font-medium text-primary">{p.name.toUpperCase()}</div>
-                      <div className="text-label text-faint">{p.units} UNITS • {p.status.toUpperCase()}</div>
+          {properties.map(p => {
+            const isPrimary = p.id === "prop-statesman";
+            return (
+              <div key={p.id} className="group relative">
+                <Panel className={`
+                  transition-all
+                  ${isPrimary 
+                    ? "border-accent bg-accent-glow shadow-[0_0_15px_rgba(52,168,83,0.1)]" 
+                    : "border-[#5B7CE6]/30 bg-[#5B7CE6]/5 hover:border-[#5B7CE6]"
+                  }
+                `}>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-2 h-2 rounded-full ${isPrimary ? "bg-accent shadow-[0_0_8px_rgba(52,168,83,0.5)] animate-pulse" : "bg-[#5B7CE6]"}`} />
+                      <div>
+                        <div className={`text-body font-medium ${isPrimary ? "text-primary" : "text-secondary"}`}>
+                          {p.name.toUpperCase()}
+                          {isPrimary && <span className="ml-2 font-pixel text-[8px] text-accent tracking-widest">[PRIMARY]</span>}
+                        </div>
+                        <div className="text-label text-faint">{p.units} UNITS • {isPrimary ? "PRIMARY_TARGET" : "ARMED_PROSPECT"}</div>
+                      </div>
                     </div>
+                    <Badge variant={isPrimary ? "statusActive" : "statusProspect"}>
+                      {isPrimary ? "IN_SYSTEM" : "ARMED"}
+                    </Badge>
                   </div>
-                  <Badge variant="statusActive">IN_SYSTEM</Badge>
-                </div>
-              </Panel>
-            </div>
-          ))}
+                </Panel>
+              </div>
+            );
+          })}
 
           {/* Discovery Properties */}
           {filteredDiscovery.map((c, idx) => (
