@@ -96,11 +96,17 @@ export default function AtmosphericWindow({
         <span className="text-label text-white px-4 py-1.5 bg-white/15 dark:bg-white/5 backdrop-blur-[10px] flex-shrink-0">{player.title}</span>
         
         {/* Progress bar container - contains XP and next level */}
-        <div className="flex-1 flex items-center justify-between px-4 py-1.5 bg-white/15 dark:bg-white/5 backdrop-blur-[10px] min-w-0">
-          <span className="text-label text-white/80">
+        <div className="flex-1 relative flex items-center justify-between px-4 py-1.5 bg-white/15 dark:bg-white/5 backdrop-blur-[10px] min-w-0 overflow-hidden">
+          {/* XP Fill */}
+          <div 
+            className="absolute inset-y-0 left-0 bg-[#F56B38] dark:bg-[#FF8A4A] transition-all duration-700 ease-out opacity-40"
+            style={{ width: `${Math.min(100, (player.xp / player.xpToNextLevel) * 100)}%` }}
+          />
+          
+          <span className="relative z-10 text-label text-white/80">
             {player.xp}/{player.xpToNextLevel}xp
           </span>
-          <span className="text-label text-white/80">{nextTitle}</span>
+          <span className="relative z-10 text-label text-white/80">{nextTitle}</span>
         </div>
         
         {/* Streak */}
