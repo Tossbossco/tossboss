@@ -102,10 +102,21 @@ export interface SparkPackage {
 }
 
 export function loadSparkPackage(slug: string): SparkPackage | null {
+  const SPARKS_DIR = path.join(process.cwd(), "lib/data/sparks");
+  const REVIEWS_DIR = path.join(process.cwd(), "lib/data/review-evidence");
+
+  console.log(`Attempting to load Spark package for slug: ${slug}`);
+  console.log(`SPARKS_DIR: ${SPARKS_DIR}`);
+  console.log(`REVIEWS_DIR: ${REVIEWS_DIR}`);
+
   const spark = loadSparkFromFile(slug);
-  if (!spark) return null;
+  if (!spark) {
+    console.error(`Failed to load Spark from file for slug: ${slug}`);
+    return null;
+  }
   
   const reviewEvidence = loadReviewEvidenceFromFile(slug) || [];
+  console.log(`Loaded Spark package successfully for: ${slug}`);
   
   return { spark, reviewEvidence };
 }
