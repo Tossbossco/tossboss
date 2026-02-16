@@ -2,27 +2,66 @@
   "tasks": [
     {
       "id": "task-1",
-      "task": "Add first 3 target properties to pipeline",
+      "task": "Generate Spark Page for The Columns at Lake Lanier",
       "xpReward": 50,
       "priority": "high",
       "dueDate": "2026-02-16",
-      "completed": false
+      "completed": false,
+      "category": "sales"
     },
     {
       "id": "task-2",
-      "task": "Define weekly outreach mission",
+      "task": "Generate Spark Page for Arbors at Lake Lanier",
       "xpReward": 50,
-      "priority": "medium",
+      "priority": "high",
       "dueDate": "2026-02-16",
-      "completed": false
+      "completed": false,
+      "category": "sales"
     },
     {
       "id": "task-3",
-      "task": "Verify Formspree lead notification email",
-      "xpReward": 25,
-      "priority": "low",
+      "task": "Generate Spark Page for Saddleview Apartments",
+      "xpReward": 50,
+      "priority": "high",
       "dueDate": "2026-02-16",
-      "completed": false
+      "completed": false,
+      "category": "sales"
+    },
+    {
+      "id": "task-5",
+      "task": "Generate Spark Page for Crest at Shakerag",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-02-16",
+      "completed": false,
+      "category": "sales"
+    },
+    {
+      "id": "task-6",
+      "task": "Generate Spark Page for The Parc at 1312",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-02-16",
+      "completed": false,
+      "category": "sales"
+    },
+    {
+      "id": "task-7",
+      "task": "Generate Spark Page for Retreat at Cumming",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-02-16",
+      "completed": false,
+      "category": "sales"
+    },
+    {
+      "id": "task-8",
+      "task": "Generate Spark Page for The Residences at West Vickers",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-02-16",
+      "completed": false,
+      "category": "sales"
     },
     {
       "id": "task-4",

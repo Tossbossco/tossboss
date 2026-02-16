@@ -21,9 +21,10 @@ import { Panel, ProgressBar, StatBox as StatBoxDS } from "../design-system";
 interface BusinessTabProps {
   business: Business;
   properties: Property[];
+  primaryTargetId?: string | null;
 }
 
-export default function BusinessTab({ business, properties }: BusinessTabProps) {
+export default function BusinessTab({ business, properties, primaryTargetId }: BusinessTabProps) {
   return (
     <div className="space-y-12 fade-in">
       {/* Properties Pipeline */}
@@ -64,7 +65,11 @@ export default function BusinessTab({ business, properties }: BusinessTabProps) 
         {/* Property list */}
         <div className="space-y-1">
           {properties.map((prop) => (
-            <PropertyRow key={prop.id} property={prop} />
+            <PropertyRow 
+              key={prop.id} 
+              property={prop} 
+              isPrimary={prop.id === primaryTargetId}
+            />
           ))}
         </div>
       </section>
@@ -165,7 +170,7 @@ export default function BusinessTab({ business, properties }: BusinessTabProps) 
 
 // ── Sub-components ─────────────────────────────────────────
 
-function PropertyRow({ property }: { property: Property }) {
+function PropertyRow({ property, isPrimary }: { property: Property; isPrimary?: boolean }) {
   const [expanded, setExpanded] = useState(false);
 
   const statusColor: Record<string, string> = {
@@ -181,7 +186,13 @@ function PropertyRow({ property }: { property: Property }) {
     <div className="overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center gap-3 px-3 py-3 text-left border border-[var(--border-dim)] bg-[var(--bg-surface)] hover:bg-[var(--bg-elevated)] transition-colors"
+        className={`
+          w-full flex items-center gap-3 px-3 py-3 text-left border transition-colors
+          ${isPrimary 
+            ? "border-[var(--accent)] bg-[var(--accent-glow)] shadow-[inset_0_0_10px_rgba(52,168,83,0.1)]" 
+            : "border-[var(--border-dim)] bg-[var(--bg-surface)] hover:bg-[var(--bg-elevated)]"
+          }
+        `}
       >
         {expanded ? (
           <ChevronDown size={10} className="text-[var(--text-faint)]" />
@@ -192,8 +203,9 @@ function PropertyRow({ property }: { property: Property }) {
           className="w-2 h-2 flex-shrink-0"
           style={{ backgroundColor: statusColor[property.status] || "var(--text-faint)" }}
         />
-        <span className="text-[13px] text-[var(--text-primary)] flex-1">
+        <span className={`text-[13px] flex-1 ${isPrimary ? "text-[var(--accent-bright)] font-medium" : "text-[var(--text-primary)]"}`}>
           {property.name}
+          {isPrimary && <span className="ml-2 font-pixel text-[8px] text-[var(--accent)] tracking-widest">[PRIMARY_TARGET]</span>}
         </span>
         <span className="text-[11px] text-[var(--text-muted)]">
           {property.units} units
@@ -204,7 +216,10 @@ function PropertyRow({ property }: { property: Property }) {
       </button>
 
       {expanded && (
-        <div className="px-3 pb-3 border border-[var(--border-dim)] border-t-0 bg-[var(--bg-surface)]">
+        <div className={`
+          px-3 pb-3 border border-t-0 bg-[var(--bg-surface)]
+          ${isPrimary ? "border-[var(--accent)]" : "border-[var(--border-dim)]"}
+        `}>
           <p className="text-[12px] text-[var(--text-muted)] py-2 leading-relaxed">
             {property.notes}
           </p>

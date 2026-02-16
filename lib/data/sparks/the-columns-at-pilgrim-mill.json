@@ -1,0 +1,23 @@
+{
+  "slug": "the-columns-at-pilgrim-mill",
+  "businessName": "The Columns at Pilgrim Mill",
+  "units": 240,
+  "reviewRiskScan": {
+    "riskSignal": "Low",
+    "mentionsCount": 2,
+    "mostCommonIssue": "Staff time spent on grounds cleanup"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 84,
+    "dimensions": {
+      "reliability": 88,
+      "residentExperience": 82,
+      "issueResponse": 80,
+      "communication": 85
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 11500,
+    "maxAmount": 26000
+  }
+}

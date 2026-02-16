@@ -19,6 +19,26 @@
         }
       ],
       "createdDate": "2026-02-16"
+    },
+    {
+      "id": "prop-columns",
+      "name": "The Columns at Pilgrim Mill",
+      "status": "prospect",
+      "units": 240,
+      "tier": null,
+      "address": "2090 Columns Dr, Cumming, GA 30041",
+      "notes": "Luxury complex near Lake Lanier. Managed by ECI Management. High-end positioning makes them sensitive to hallway appearance and odor. Target for 'Luxury Standard' pitch.",
+      "contacts": [
+        {
+          "name": "Property Manager",
+          "role": "Decision Maker",
+          "phone": "(770) 889-1000",
+          "email": null,
+          "lastContact": "—",
+          "notes": "Researching specific manager name."
+        }
+      ],
+      "createdDate": "2026-02-16"
     }
   ]
 }

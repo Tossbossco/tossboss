@@ -48,11 +48,12 @@ export default function AtmosphericWindow({
   isMapActive,
 }: AtmosphericWindowProps) {
   const nextTitle = getTitle(player.level + 1);
+  const primaryTarget = properties.find(p => p.id === player.primaryTargetId);
 
   if (isMapActive) {
     return (
       <div className="relative h-[360px] border border-black/[0.08] dark:border-white/10 overflow-hidden">
-        <TacticalMap properties={properties} />
+        <TacticalMap properties={properties} primaryTargetId={player.primaryTargetId} />
         
         {/* Overlay gradient for UI readability */}
         <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black/80 z-[1000]" />
@@ -60,10 +61,10 @@ export default function AtmosphericWindow({
         {/* Status overlay at bottom */}
         <div className="absolute bottom-0 left-0 right-0 flex items-center gap-2 p-2 pointer-events-none z-[1001]">
           <span className="text-label text-white px-4 py-1.5 bg-black/60 backdrop-blur-[10px] flex-shrink-0">
-            TERRITORY VIEW
+            {primaryTarget ? `TARGET: ${primaryTarget.name.toUpperCase()}` : "TERRITORY VIEW"}
           </span>
           <div className="flex-1 flex items-center justify-between px-4 py-1.5 bg-black/60 backdrop-blur-[10px] min-w-0">
-            <span className="text-label text-white/80">CUMMING, GA</span>
+            <span className="text-label text-white/80">{primaryTarget ? primaryTarget.address.toUpperCase() : "CUMMING, GA"}</span>
             <span className="text-label text-accent">LIVE</span>
           </div>
         </div>

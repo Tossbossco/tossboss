@@ -84,11 +84,13 @@ export default function Dashboard({ data }: DashboardProps) {
         {activeTab === "home" && (
           <HomeTab
             tasks={data.tasks}
+            properties={data.properties}
             storyMissions={data.missions.storyMissions}
             weeklyMissions={data.missions.weeklyMissions}
             sideMissions={data.missions.sideMissions}
             tips={data.tips}
             tipIndex={data.tipIndex}
+            primaryTargetId={data.player.primaryTargetId}
           />
         )}
         {activeTab === "missions" && (
@@ -104,6 +106,7 @@ export default function Dashboard({ data }: DashboardProps) {
           <BusinessTab
             business={data.business}
             properties={data.properties}
+            primaryTargetId={data.player.primaryTargetId}
           />
         )}
         {activeTab === "map" && (

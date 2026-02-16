@@ -20,6 +20,15 @@ const DiscoveredIcon = L.divIcon({
   iconAnchor: [5, 5],
 });
 
+const PrimaryIcon = L.divIcon({
+  className: "custom-div-icon",
+  html: `<div class="primary-target-marker" style="background-color: #34A853; width: 16px; height: 16px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 20px #34A853; display: flex; items-center; justify-center;">
+    <div style="width: 6px; height: 6px; background-color: white; border-radius: 50%; animation: pulse 1.5s infinite;"></div>
+  </div>`,
+  iconSize: [16, 16],
+  iconAnchor: [8, 8],
+});
+
 interface Property {
   name: string;
   units: number;
@@ -60,7 +69,7 @@ function MapEvents({ onMove }: { onMove: () => void }) {
   return null;
 }
 
-export default function TacticalMap({ properties }: { properties: any[] }) {
+export default function TacticalMap({ properties, primaryTargetId }: { properties: any[], primaryTargetId?: string | null }) {
   const [isMounted, setIsMounted] = useState(false);
   const [mapVersion, setMapVersion] = useState(0);
 
@@ -71,6 +80,7 @@ export default function TacticalMap({ properties }: { properties: any[] }) {
   if (!isMounted) return <div className="w-full h-full bg-void animate-pulse" />;
 
   const activeNames = properties.map(p => p.name.toLowerCase());
+  const primaryTarget = properties.find(p => p.id === primaryTargetId);
 
   return (
     <div className="w-full h-full relative group">
@@ -90,16 +100,18 @@ export default function TacticalMap({ properties }: { properties: any[] }) {
 
         {CUMMING_COMPLEXES.map((p, idx) => {
           const isActive = activeNames.includes(p.name.toLowerCase());
+          const isPrimary = primaryTarget?.name.toLowerCase() === p.name.toLowerCase();
+          
           return (
             <Marker 
               key={`${idx}-${mapVersion}`} 
               position={[p.lat, p.lng]} 
-              icon={isActive ? ActiveIcon : DiscoveredIcon}
+              icon={isPrimary ? PrimaryIcon : isActive ? ActiveIcon : DiscoveredIcon}
             >
               <Popup className="tactical-popup">
                 <div className="p-2 min-w-[180px] bg-surface text-primary font-pixel">
-                  <div className="text-[10px] text-accent mb-1 tracking-wider uppercase">
-                    {isActive ? "ACTIVE_TARGET" : "DISCOVERED_PROPERTY"}
+                  <div className={`text-[10px] mb-1 tracking-wider uppercase ${isPrimary ? "text-[var(--accent-bright)] font-bold" : "text-accent"}`}>
+                    {isPrimary ? "PRIMARY_TARGET" : isActive ? "ACTIVE_TARGET" : "DISCOVERED_PROPERTY"}
                   </div>
                   <div className="text-[12px] font-medium mb-2 border-b border-dim pb-1">
                     {p.name.toUpperCase()}

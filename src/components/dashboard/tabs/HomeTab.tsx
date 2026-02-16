@@ -4,13 +4,15 @@ import type { Task, StoryMission, WeeklyMission, SideMission } from "@/lib/types
 import { useRouter } from "next/navigation";
 import { isOverdue } from "@/lib/utils";
 import {
+  ChevronDown,
   ChevronRight,
   Circle,
   Crosshair,
+  MapPin,
   Sword,
   Target,
 } from "lucide-react";
-import { ProgressBar, TaskRow, MissionCard } from "../design-system";
+import { ProgressBar, TaskRow, MissionCard, Panel } from "../design-system";
 
 // ═══════════════════════════════════════════════════════════
 // Home Tab — Today's tasks, active missions, tip
@@ -18,22 +20,29 @@ import { ProgressBar, TaskRow, MissionCard } from "../design-system";
 
 interface HomeTabProps {
   tasks: Task[];
+  properties: Property[];
   storyMissions: StoryMission[];
   weeklyMissions: WeeklyMission[];
   sideMissions: SideMission[];
   tips: string[];
   tipIndex: number;
+  primaryTargetId?: string | null;
 }
 
 export default function HomeTab({
   tasks,
+  properties,
   storyMissions,
   weeklyMissions,
   sideMissions,
   tips,
   tipIndex,
+  primaryTargetId,
 }: HomeTabProps) {
   const today = new Date().toISOString().split("T")[0];
+  
+  const primaryTarget = properties.find(p => p.id === primaryTargetId);
+
   const todayTasks = tasks.filter(
     (t) => !t.completed && (t.dueDate === today || isOverdue(t.dueDate))
   );
@@ -66,6 +75,28 @@ export default function HomeTab({
 
   return (
     <div className="space-y-10 fade-in">
+      {/* Primary Target Highlight */}
+      {primaryTarget && (
+        <section>
+          <SectionHeader icon={<MapPin size={12} />} label="PRIMARY_TARGET" />
+          <Panel className="mt-3 border-[var(--accent)] bg-[var(--accent-glow)] shadow-[0_0_15px_rgba(52,168,83,0.1)]">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="text-label text-[var(--accent)] mb-1 tracking-widest uppercase font-pixel">Priority_Intel</div>
+                <div className="text-body font-medium text-primary">{primaryTarget.name.toUpperCase()}</div>
+                <div className="text-label text-dim mt-1">{primaryTarget.units} Units • {primaryTarget.status.toUpperCase()}</div>
+              </div>
+              <div className="text-right">
+                <div className="text-label text-faint mb-1">CURRENT_PHASE</div>
+                <div className="text-label text-secondary px-2 py-1 bg-white/5 border border-white/10 rounded">
+                  FIRST_CONTACT
+                </div>
+              </div>
+            </div>
+          </Panel>
+        </section>
+      )}
+
       {/* Active Story Mission */}
       {activeStory && (
         <section>
