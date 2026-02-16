@@ -72,8 +72,10 @@ export default function Dashboard({ data }: DashboardProps) {
       <div className="px-6 max-w-[720px] mx-auto">
         <AtmosphericWindow
           player={data.player}
+          properties={data.properties}
           onClick={handleOpenStats}
           isStatsActive={activeTab === "stats"}
+          isMapActive={activeTab === "map"}
         />
       </div>
 

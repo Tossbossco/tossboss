@@ -2,6 +2,13 @@
 
 import type { Player } from "@/lib/types";
 import { Flame } from "lucide-react";
+import dynamic from "next/dynamic";
+
+// Dynamically import the map to avoid SSR issues with Leaflet
+const TacticalMap = dynamic(() => import("./TacticalMap"), {
+  ssr: false,
+  loading: () => <div className="w-full h-full bg-void animate-pulse" />,
+});
 
 // ═══════════════════════════════════════════════════════════
 // AtmosphericWindow — Visual window with status overlay
@@ -27,16 +34,42 @@ function romanNumeral(n: number): string {
 
 interface AtmosphericWindowProps {
   player: Player;
+  properties: any[];
   onClick: () => void;
   isStatsActive: boolean;
+  isMapActive?: boolean;
 }
 
 export default function AtmosphericWindow({
   player,
+  properties,
   onClick,
   isStatsActive,
+  isMapActive,
 }: AtmosphericWindowProps) {
   const nextTitle = getTitle(player.level + 1);
+
+  if (isMapActive) {
+    return (
+      <div className="relative h-[360px] border border-black/[0.08] dark:border-white/10 overflow-hidden">
+        <TacticalMap properties={properties} />
+        
+        {/* Overlay gradient for UI readability */}
+        <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-transparent to-black/80 z-[1000]" />
+
+        {/* Status overlay at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 flex items-center gap-2 p-2 pointer-events-none z-[1001]">
+          <span className="text-label text-white px-4 py-1.5 bg-black/60 backdrop-blur-[10px] flex-shrink-0">
+            TERRITORY VIEW
+          </span>
+          <div className="flex-1 flex items-center justify-between px-4 py-1.5 bg-black/60 backdrop-blur-[10px] min-w-0">
+            <span className="text-label text-white/80">CUMMING, GA</span>
+            <span className="text-label text-accent">LIVE</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div

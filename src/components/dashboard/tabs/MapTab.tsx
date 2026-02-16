@@ -11,20 +11,22 @@ import { Panel, Badge } from "../design-system";
 
 interface MapTabProps {
   properties: Property[];
+  isMapActive?: boolean;
 }
 
 const CUMMING_COMPLEXES = [
-  { name: "The Columns at Lake Lanier", units: 240, address: "2100 Columns Dr, Cumming, GA 30041" },
-  { name: "Arbors at Lake Lanier", units: 180, address: "1510 Arbors Cir, Cumming, GA 30041" },
-  { name: "Saddleview Apartments", units: 156, address: "100 Saddleview Ct, Cumming, GA 30040" },
-  { name: "Crest at Shakerag", units: 320, address: "Cumming, GA 30041" },
-  { name: "The Parc at 1312", units: 210, address: "1312 Pilgrim Rd, Cumming, GA 30040" },
-  { name: "Retreat at Cumming", units: 192, address: "Cumming, GA 30040" },
-  { name: "The Residences at West Vickers", units: 144, address: "Cumming, GA 30040" },
+  { name: "The Columns at Lake Lanier", units: 240, address: "2100 Columns Dr, Cumming, GA 30041", lat: 34.207, lng: -84.140 },
+  { name: "Arbors at Lake Lanier", units: 180, address: "1510 Arbors Cir, Cumming, GA 30041", lat: 34.215, lng: -84.135 },
+  { name: "Saddleview Apartments", units: 156, address: "100 Saddleview Ct, Cumming, GA 30040", lat: 34.220, lng: -84.150 },
+  { name: "Crest at Shakerag", units: 320, address: "Cumming, GA 30041", lat: 34.180, lng: -84.120 },
+  { name: "The Parc at 1312", units: 210, address: "1312 Pilgrim Rd, Cumming, GA 30040", lat: 34.225, lng: -84.145 },
+  { name: "Retreat at Cumming", units: 192, address: "Cumming, GA 30040", lat: 34.210, lng: -84.155 },
+  { name: "The Residences at West Vickers", units: 144, address: "Cumming, GA 30040", lat: 34.205, lng: -84.160 },
 ];
 
-export default function MapTab({ properties }: MapTabProps) {
+export default function MapTab({ properties, isMapActive }: MapTabProps) {
   const [search, setSearch] = useState("");
+  const [selectedProperty, setSelectedProperty] = useState<typeof CUMMING_COMPLEXES[0] | null>(null);
   
   const filteredDiscovery = CUMMING_COMPLEXES.filter(c => 
     c.name.toLowerCase().includes(search.toLowerCase()) &&
