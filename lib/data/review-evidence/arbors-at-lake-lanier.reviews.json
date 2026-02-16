@@ -11,6 +11,12 @@
       "source": "Google Reviews",
       "reviewDate": "2026-01-20",
       "tags": ["odor", "hallways"]
+    },
+    {
+      "textSnippet": "Valet service is hit or miss. I've had to call the office twice this month because my bin wasn't emptied.",
+      "source": "Apartments.com",
+      "reviewDate": "2025-11-28",
+      "tags": ["valet", "missed-pickup"]
     }
   ]
 }
