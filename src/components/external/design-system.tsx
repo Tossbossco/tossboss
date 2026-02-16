@@ -113,7 +113,7 @@ export function ExternalMetric({
     <div>
       <div className="text-sm text-gray-500 mb-2">{label}</div>
       <div className={`font-serif text-4xl ${valueClassName}`}>{value}</div>
-      {helper ? <p className="text-sm text-gray-600 mt-2">{helper}</p> : null}
+      {helper ? <div className="text-sm text-gray-600 mt-2">{helper}</div> : null}
     </div>
   );
 }
