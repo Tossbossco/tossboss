@@ -105,6 +105,17 @@ export function loadSparkPackage(slug: string): SparkPackage | null {
   const SPARKS_DIR = path.join(process.cwd(), "lib/data/sparks");
   const REVIEWS_DIR = path.join(process.cwd(), "lib/data/review-evidence");
 
+  // Log directory contents to see what's available in the runtime environment
+  try {
+    if (fs.existsSync(SPARKS_DIR)) {
+      console.log(`Contents of ${SPARKS_DIR}:`, fs.readdirSync(SPARKS_DIR));
+    } else {
+      console.error(`Directory not found: ${SPARKS_DIR}`);
+    }
+  } catch (e) {
+    console.error(`Error reading ${SPARKS_DIR}:`, e);
+  }
+
   console.log(`Attempting to load Spark package for slug: ${slug}`);
   console.log(`SPARKS_DIR: ${SPARKS_DIR}`);
   console.log(`REVIEWS_DIR: ${REVIEWS_DIR}`);
