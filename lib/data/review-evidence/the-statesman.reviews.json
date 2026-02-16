@@ -1,0 +1,14 @@
+[
+  {
+    "textSnippet": "The amenities are great but sometimes the trash valet is a bit late and leaves bags in the hallway for too long.",
+    "source": "Google Reviews",
+    "reviewDate": "2025-11-12",
+    "tags": ["valet", "timing"]
+  },
+  {
+    "textSnippet": "Love the pool! Only complaint is the dumpster area gets a bit messy on weekends.",
+    "source": "Apartments.com",
+    "reviewDate": "2026-01-05",
+    "tags": ["dumpster", "overflow"]
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "slug": "the-statesman",
+  "businessName": "The Statesman",
+  "units": 252,
+  "reviewRiskScan": {
+    "riskSignal": "Medium",
+    "mentionsCount": 4,
+    "mostCommonIssue": "Inconsistent pickup timing"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 72,
+    "dimensions": {
+      "reliability": 65,
+      "residentExperience": 78,
+      "issueResponse": 70,
+      "communication": 75
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 12000,
+    "maxAmount": 28000
+  }
+}

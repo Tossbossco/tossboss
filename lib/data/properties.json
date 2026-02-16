@@ -1,3 +1,24 @@
 {
-  "properties": []
+  "properties": [
+    {
+      "id": "prop-statesman",
+      "name": "The Statesman",
+      "status": "prospect",
+      "units": 252,
+      "tier": null,
+      "address": "1600 Ronald Reagan Blvd, Cumming, GA 30041",
+      "notes": "Initial recon initiated. Luxury complex managed by Harbor Group. High standard of amenities, but potential for valet service optimization.",
+      "contacts": [
+        {
+          "name": "Property Manager",
+          "role": "Decision Maker",
+          "phone": "(678) 658-3614",
+          "email": null,
+          "lastContact": "—",
+          "notes": "Target for first Spark Page delivery."
+        }
+      ],
+      "createdDate": "2026-02-16"
+    }
+  ]
 }
