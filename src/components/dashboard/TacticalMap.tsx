@@ -8,7 +8,7 @@ import "leaflet/dist/leaflet.css";
 // Fix for default marker icons in Leaflet with Next.js
 const ActiveIcon = L.divIcon({
   className: "custom-div-icon",
-  html: `<div style="background-color: #34A853; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 10px #34A853;"></div>`,
+  html: `<div style="background-color: #5B7CE6; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 10px #5B7CE6;"></div>`,
   iconSize: [12, 12],
   iconAnchor: [6, 6],
 });
@@ -110,8 +110,8 @@ export default function TacticalMap({ properties, primaryTargetId }: { propertie
             >
               <Popup className="tactical-popup">
                 <div className="p-2 min-w-[180px] bg-surface text-primary font-pixel">
-                  <div className={`text-[10px] mb-1 tracking-wider uppercase ${isPrimary ? "text-[var(--accent-bright)] font-bold" : "text-accent"}`}>
-                    {isPrimary ? "PRIMARY_TARGET" : isActive ? "ACTIVE_TARGET" : "DISCOVERED_PROPERTY"}
+                  <div className={`text-[10px] mb-1 tracking-wider uppercase ${isPrimary ? "text-[var(--accent-bright)] font-bold" : "text-[#5B7CE6]"}`}>
+                    {isPrimary ? "PRIMARY_TARGET" : isActive ? "ARMED_PROSPECT" : "DISCOVERED_PROPERTY"}
                   </div>
                   <div className="text-[12px] font-medium mb-2 border-b border-dim pb-1">
                     {p.name.toUpperCase()}
