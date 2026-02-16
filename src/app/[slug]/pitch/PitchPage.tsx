@@ -228,7 +228,7 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                   <ExternalCard className="rounded-xl">
                     <h3 className="font-serif text-xl text-[#1B4D3E] mb-6">Evidence from Reviews</h3>
                     <div className="space-y-4">
-                      {reviewEvidence.slice(0, 4).map((review, idx) => (
+                      {reviewEvidence.map((review, idx) => (
                         <ExternalEvidenceQuote
                           key={idx}
                           quote={review.textSnippet}
