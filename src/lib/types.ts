@@ -16,6 +16,7 @@ export interface Player {
     lastActiveDate: string;
     multiplier: number;
   };
+  dailyXp: Record<string, number>;
   stats: CharacterStats;
   lastDecayCheck: string;
   decayActive: boolean;

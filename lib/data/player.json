@@ -12,6 +12,10 @@
     "lastActiveDate": "2026-02-17",
     "multiplier": 1
   },
+  "dailyXp": {
+    "2026-02-16": 500,
+    "2026-02-17": 100
+  },
   "stats": {
     "sales": 6,
     "operations": 0,

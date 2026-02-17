@@ -7,6 +7,7 @@ import MissionsTab from "./tabs/MissionsTab";
 import StatsTab from "./tabs/StatsTab";
 import BusinessTab from "./tabs/BusinessTab";
 import MapTab from "./tabs/MapTab";
+import CalendarTab from "./tabs/CalendarTab";
 import GuideTab from "./tabs/GuideTab";
 import type { DashboardData } from "@/lib/types";
 
@@ -14,13 +15,14 @@ import type { DashboardData } from "@/lib/types";
 // Dashboard — Main shell with atmospheric window
 // ═══════════════════════════════════════════════════════════
 
-export type TabId = "home" | "missions" | "stats" | "business" | "map" | "guide";
+export type TabId = "home" | "missions" | "stats" | "business" | "map" | "guide" | "calendar";
 
 const MAIN_TABS: { id: Exclude<TabId, "stats" | "guide">; label: string }[] = [
   { id: "home", label: "Home" },
   { id: "missions", label: "Missions" },
   { id: "business", label: "Business" },
   { id: "map", label: "Map" },
+  { id: "calendar", label: "Calendar" },
 ];
 
 interface DashboardProps {
@@ -111,6 +113,9 @@ export default function Dashboard({ data }: DashboardProps) {
         )}
         {activeTab === "map" && (
           <MapTab properties={data.properties} />
+        )}
+        {activeTab === "calendar" && (
+          <CalendarTab dailyXp={data.player.dailyXp || {}} />
         )}
         {activeTab === "guide" && <GuideTab />}
       </div>

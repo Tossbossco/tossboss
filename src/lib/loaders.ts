@@ -39,6 +39,7 @@ export async function getPlayer(): Promise<Player> {
       xpToNextLevel: 100,
       totalXpEarned: 0,
       streak: { current: 0, longest: 0, lastActiveDate: "", multiplier: 1 },
+      dailyXp: {},
       stats: { sales: 0, operations: 0, marketing: 0, finance: 0, leadership: 0 },
       lastDecayCheck: "",
       decayActive: false,

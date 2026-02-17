@@ -49,6 +49,11 @@ export async function POST(request: Request) {
       // Revert XP
       player.xp = Math.max(0, player.xp - task.xpReward);
       player.totalXpEarned = Math.max(0, player.totalXpEarned - task.xpReward);
+
+      // Revert Daily XP
+      if (player.dailyXp && player.dailyXp[today]) {
+        player.dailyXp[today] = Math.max(0, player.dailyXp[today] - task.xpReward);
+      }
       
       // Revert Stats
       if (task.category && player.stats[task.category] !== undefined) {
@@ -77,6 +82,10 @@ export async function POST(request: Request) {
       // Award XP
       player.xp += task.xpReward;
       player.totalXpEarned += task.xpReward;
+
+      // Award Daily XP
+      if (!player.dailyXp) player.dailyXp = {};
+      player.dailyXp[today] = (player.dailyXp[today] || 0) + task.xpReward;
 
       // Award Stats
       if (task.category && player.stats[task.category] !== undefined) {
