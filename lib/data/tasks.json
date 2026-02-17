@@ -18,7 +18,34 @@
       "dueDate": "2026-02-16",
       "completed": true,
       "category": "sales",
-      "completedDate": "2026-02-17"
+      "completedDate": "2026-02-16"
+    },
+    {
+      "id": "task-10",
+      "task": "Add first 3 target properties to pipeline",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-02-16",
+      "completed": true,
+      "completedDate": "2026-02-16"
+    },
+    {
+      "id": "task-11",
+      "task": "Define weekly outreach mission",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-02-16",
+      "completed": true,
+      "completedDate": "2026-02-16"
+    },
+    {
+      "id": "task-12",
+      "task": "Verify Formspree lead notification email",
+      "xpReward": 25,
+      "priority": "low",
+      "dueDate": "2026-02-16",
+      "completed": true,
+      "completedDate": "2026-02-16"
     },
     {
       "id": "task-3",
