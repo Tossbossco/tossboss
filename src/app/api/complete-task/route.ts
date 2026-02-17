@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     const isUndo = task.completed; // If already completed, we are undoing
 
     // 3. Update Task
-    const today = new Date().toISOString().split("T")[0];
+    const today = new Date().toLocaleDateString("en-CA"); // YYYY-MM-DD in local time
     
     if (isUndo) {
       // UNDO LOGIC

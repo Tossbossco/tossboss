@@ -40,7 +40,7 @@ export default function HomeTab({
   tipIndex,
   primaryTargetId,
 }: HomeTabProps) {
-  const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toLocaleDateString("en-CA");
   
   const primaryTarget = properties.find(p => p.id === primaryTargetId);
 
