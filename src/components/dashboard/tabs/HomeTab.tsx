@@ -4,6 +4,7 @@ import type { Task, Property, StoryMission, WeeklyMission, SideMission } from "@
 import { useRouter } from "next/navigation";
 import { isOverdue } from "@/lib/utils";
 import {
+  CheckCircle2,
   ChevronDown,
   ChevronRight,
   Circle,
@@ -127,11 +128,24 @@ export default function HomeTab({
           {todayTasks.map((task) => (
             <TaskRowDS key={task.id} task={task} onToggle={() => handleToggleTask(task.id)} />
           ))}
-          {completedToday.map((task) => (
-            <TaskRowDS key={task.id} task={task} onToggle={() => handleToggleTask(task.id)} />
-          ))}
         </div>
       </section>
+
+      {/* Completed Today */}
+      {completedToday.length > 0 && (
+        <section>
+          <SectionHeader
+            icon={<CheckCircle2 size={12} />}
+            label="COMPLETED_TODAY"
+            count={completedToday.length}
+          />
+          <div className="mt-3 space-y-0 opacity-60">
+            {completedToday.map((task) => (
+              <TaskRowDS key={task.id} task={task} onToggle={() => handleToggleTask(task.id)} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Upcoming */}
       {upcomingTasks.length > 0 && (
