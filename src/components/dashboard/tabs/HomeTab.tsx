@@ -48,7 +48,7 @@ export default function HomeTab({
     (t) => !t.completed && (t.dueDate === today || isOverdue(t.dueDate))
   );
   const completedToday = tasks.filter(
-    (t) => t.completed && t.completedDate === today
+    (t) => t.completed
   );
   const upcomingTasks = tasks.filter(
     (t) => !t.completed && t.dueDate > today
