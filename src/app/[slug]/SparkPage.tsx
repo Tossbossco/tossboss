@@ -67,17 +67,21 @@ export default function SparkPage({ spark }: SparkPageProps) {
             {/* Finding 1: Signal */}
             <ExternalCard>
               <ExternalMetric
-                label="Operational Health Scan"
+                label={spark.reviewRiskScan.riskSignal === "Optimization" ? "Asset Optimization" : "Operational Health Scan"}
                 value={
                   <span className={
                     spark.reviewRiskScan.riskSignal === "Critical" ? "text-red-600" :
                     spark.reviewRiskScan.riskSignal === "Friction" ? "text-amber-600" :
                     "text-[#2D5A45]"
                   }>
-                    {spark.reviewRiskScan.riskSignal}
+                    {spark.reviewRiskScan.riskSignal === "Optimization" ? "High Performance" : spark.reviewRiskScan.riskSignal}
                   </span>
                 }
-                helper={`${spark.reviewRiskScan.mentionsCount} trash-related mentions in public history`}
+                helper={
+                  spark.reviewRiskScan.riskSignal === "Optimization" 
+                    ? "Asset is clean; focus shifts to labor recovery and NOI spread"
+                    : `${spark.reviewRiskScan.mentionsCount} trash-related mentions in public history`
+                }
               />
             </ExternalCard>
 

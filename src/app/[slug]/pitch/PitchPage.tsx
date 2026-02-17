@@ -158,9 +158,13 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   <ExternalCard tone="soft" className={`rounded-xl ${getRiskColor(executiveSnapshot.residentFrictionSignal)}`}>
                     <ExternalMetric
-                      label="Operational Health Signal"
-                      value={<span className="font-serif text-4xl">{executiveSnapshot.residentFrictionSignal}</span>}
-                      helper={`Based on ${reviewEvidence.length} all-time trash mentions`}
+                      label={spark.reviewRiskScan.riskSignal === "Optimization" ? "Asset Optimization Report" : "Operational Health Signal"}
+                      value={<span className="font-serif text-4xl">{spark.reviewRiskScan.riskSignal === "Optimization" ? "High Performance" : executiveSnapshot.residentFrictionSignal}</span>}
+                      helper={
+                        spark.reviewRiskScan.riskSignal === "Optimization"
+                          ? "Focus: Hidden Labor Recovery & NOI Spread"
+                          : `Based on ${reviewEvidence.length} all-time trash mentions`
+                      }
                     />
                   </ExternalCard>
 
@@ -186,7 +190,9 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
 
                 <ExternalCard className="rounded-xl">
                   <p className="text-gray-600 text-lg leading-relaxed">
-                    The property has measurable execution gaps and recoverable value. The opportunity is operational improvement plus measurable financial upside.
+                    {spark.reviewRiskScan.riskSignal === "Optimization" 
+                      ? "The property is a high-performing asset. Our focus is on recovering hidden labor hours and maximizing the NOI spread by outperforming national vendor cost structures."
+                      : "The property has measurable execution gaps and recoverable value. The opportunity is operational improvement plus measurable financial upside."}
                   </p>
                 </ExternalCard>
               </div>
