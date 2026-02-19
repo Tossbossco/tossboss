@@ -2,6 +2,7 @@
   "slug": "saddleview-apartments",
   "businessName": "Saddleview Apartments",
   "units": 156,
+  "strategy": "RevenueLeadership",
   "reviewRiskScan": {
     "riskSignal": "Optimization",
     "mentionsCount": 0,

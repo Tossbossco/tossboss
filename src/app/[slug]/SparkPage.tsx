@@ -41,16 +41,18 @@ export default function SparkPage({ spark }: SparkPageProps) {
         <div className="max-w-4xl mx-auto">
           <h1 className="font-serif text-4xl sm:text-5xl text-[#1B4D3E] mb-6 leading-tight">
             {spark.businessName}<br />
-            Free Valet Service Audit
+            {spark.strategy === "RevenueLeadership" ? "Revenue & Cost Leadership Report" : "Free Valet Service Audit"}
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-8">
-            We analyzed your current valet setup and found specific opportunities to improve NOI and resident satisfaction. Book a 20-minute debrief to review the findings.
+            {spark.strategy === "RevenueLeadership" 
+              ? "We analyzed your current vendor's cost structure and identified significant cost arbitrage opportunities to maximize your property's NOI spread."
+              : "We analyzed your current valet setup and found specific opportunities to improve NOI and resident satisfaction. Book a 20-minute debrief to review the findings."}
           </p>
           <Link
             href="#book"
             className={externalButtonClass("primary", "px-8 py-4")}
           >
-            Claim Your Free Audit
+            {spark.strategy === "RevenueLeadership" ? "View Leadership Analysis" : "Claim Your Free Audit"}
           </Link>
         </div>
       </ExternalSection>
@@ -60,26 +62,28 @@ export default function SparkPage({ spark }: SparkPageProps) {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <ExternalEyebrow>Preview</ExternalEyebrow>
-            <ExternalHeading>Three findings from your audit</ExternalHeading>
+            <ExternalHeading>
+              {spark.strategy === "RevenueLeadership" ? "Three financial optimization insights" : "Three findings from your audit"}
+            </ExternalHeading>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Finding 1: Signal */}
             <ExternalCard>
               <ExternalMetric
-                label={spark.reviewRiskScan.riskSignal === "Optimization" ? "Asset Optimization" : "Operational Health Scan"}
+                label={spark.strategy === "RevenueLeadership" ? "Cost Arbitrage Opportunity" : "Operational Health Scan"}
                 value={
                   <span className={
                     spark.reviewRiskScan.riskSignal === "Critical" ? "text-red-600" :
                     spark.reviewRiskScan.riskSignal === "Friction" ? "text-amber-600" :
                     "text-[#2D5A45]"
                   }>
-                    {spark.reviewRiskScan.riskSignal === "Optimization" ? "High Performance" : spark.reviewRiskScan.riskSignal}
+                    {spark.strategy === "RevenueLeadership" ? "High Margin" : spark.reviewRiskScan.riskSignal}
                   </span>
                 }
                 helper={
-                  spark.reviewRiskScan.riskSignal === "Optimization" 
-                    ? "Asset is clean; focus shifts to labor recovery and NOI spread"
+                  spark.strategy === "RevenueLeadership" 
+                    ? "Eliminating the 'National Vendor Tax' on corporate overhead"
                     : `${spark.reviewRiskScan.mentionsCount} trash-related mentions in public history`
                 }
               />

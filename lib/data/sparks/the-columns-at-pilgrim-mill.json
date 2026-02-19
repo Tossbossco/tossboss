@@ -2,6 +2,7 @@
   "slug": "the-columns-at-pilgrim-mill",
   "businessName": "The Columns at Pilgrim Mill",
   "units": 240,
+  "strategy": "RevenueLeadership",
   "reviewRiskScan": {
     "riskSignal": "Optimization",
     "mentionsCount": 1,

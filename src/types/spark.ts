@@ -2,6 +2,7 @@ export interface Spark {
   slug: string;
   businessName: string;
   units: number;
+  strategy: "RiskAudit" | "RevenueLeadership";
   preparedFor?: string;
   preparedDate?: string;
   reviewRiskScan: {

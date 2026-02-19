@@ -158,11 +158,11 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   <ExternalCard tone="soft" className={`rounded-xl ${getRiskColor(executiveSnapshot.residentFrictionSignal)}`}>
                     <ExternalMetric
-                      label={spark.reviewRiskScan.riskSignal === "Optimization" ? "Asset Optimization Report" : "Operational Health Signal"}
-                      value={<span className="font-serif text-4xl">{spark.reviewRiskScan.riskSignal === "Optimization" ? "High Performance" : executiveSnapshot.residentFrictionSignal}</span>}
+                      label={spark.strategy === "RevenueLeadership" ? "Revenue Leadership Report" : "Operational Health Signal"}
+                      value={<span className="font-serif text-4xl">{spark.strategy === "RevenueLeadership" ? "High Margin" : executiveSnapshot.residentFrictionSignal}</span>}
                       helper={
-                        spark.reviewRiskScan.riskSignal === "Optimization"
-                          ? "Focus: Hidden Labor Recovery & NOI Spread"
+                        spark.strategy === "RevenueLeadership"
+                          ? "Focus: Cost Arbitrage & NOI Spread"
                           : `Based on ${reviewEvidence.length} all-time trash mentions`
                       }
                     />
@@ -190,8 +190,8 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
 
                 <ExternalCard className="rounded-xl">
                   <p className="text-gray-600 text-lg leading-relaxed">
-                    {spark.reviewRiskScan.riskSignal === "Optimization" 
-                      ? "The property is a high-performing asset. Our focus is on recovering hidden labor hours and maximizing the NOI spread by outperforming national vendor cost structures."
+                    {spark.strategy === "RevenueLeadership" 
+                      ? "The property is a high-performing asset. Our analysis identifies a significant cost arbitrage opportunity by eliminating national vendor overhead and maximizing the NOI spread for ownership."
                       : "The property has measurable execution gaps and recoverable value. The opportunity is operational improvement plus measurable financial upside."}
                   </p>
                 </ExternalCard>
@@ -205,17 +205,28 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-12">
                   <h2 className="font-serif text-3xl lg:text-4xl text-[#1B4D3E]">
-                    Reputation Analysis
+                    {spark.strategy === "RevenueLeadership" ? "Operational Efficiency Analysis" : "Reputation Analysis"}
                   </h2>
-                  <p className="text-gray-600 mt-4">Evidence from all-time public reviews</p>
+                  <p className="text-gray-600 mt-4">
+                    {spark.strategy === "RevenueLeadership" ? "Analysis of hidden labor and vendor performance" : "Evidence from all-time public reviews"}
+                  </p>
                 </div>
                 
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <ExternalCard className="rounded-xl">
-                      <h3 className="font-serif text-xl text-[#1B4D3E] mb-4">Recurring Complaint Themes</h3>
+                      <h3 className="font-serif text-xl text-[#1B4D3E] mb-4">
+                        {spark.strategy === "RevenueLeadership" ? "Efficiency Themes" : "Recurring Complaint Themes"}
+                      </h3>
                       <ul className="space-y-3">
-                        {reviewDeepDive.recurringThemes.map((theme, idx) => (
+                        {(spark.strategy === "RevenueLeadership" 
+                          ? [
+                              "Maintenance staff 'touch-up' time leakage",
+                              "National vendor corporate overhead tax",
+                              "Ancillary revenue margin compression",
+                              "Operational drag from rigid vendor policies"
+                            ]
+                          : reviewDeepDive.recurringThemes).map((theme, idx) => (
                           <li key={idx} className="flex items-start gap-3 text-gray-600">
                             <span className="text-[#2D5A45] mt-1">•</span>
                             {theme}
@@ -225,32 +236,40 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                     </ExternalCard>
 
                     <ExternalCard className="rounded-xl">
-                      <h3 className="font-serif text-xl text-[#1B4D3E] mb-4">Reputation Impact</h3>
-                      <p className="text-gray-600">{reviewDeepDive.impactOnReputation}</p>
+                      <h3 className="font-serif text-xl text-[#1B4D3E] mb-4">
+                        {spark.strategy === "RevenueLeadership" ? "Financial Impact" : "Reputation Impact"}
+                      </h3>
+                      <p className="text-gray-600">
+                        {spark.strategy === "RevenueLeadership" 
+                          ? "Current vendor overhead is compressing your net margins. By switching to a local, lean operator, you recover the 'corporate tax' and increase the NOI spread per unit."
+                          : reviewDeepDive.impactOnReputation}
+                      </p>
                     </ExternalCard>
                   </div>
 
-                  {/* Real Review Evidence */}
-                  <ExternalCard className="rounded-xl">
-                    <h3 className="font-serif text-xl text-[#1B4D3E] mb-6">Evidence from Reviews</h3>
-                    <div className="space-y-4">
-                      {reviewEvidence.map((review, idx) => (
-                        <ExternalEvidenceQuote
-                          key={idx}
-                          quote={review.textSnippet}
-                          source={review.source}
-                          date={new Date(review.reviewDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
-                          tags={review.tags.join(', ')}
-                        />
-                      ))}
-                    </div>
-                    <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                      <p className="text-sm text-gray-600">
-                        <span className="font-medium">Method:</span> Analyzed all-time reviews across Google, Yelp, and Apartments.com. 
-                        Tagged by relevance to trash/sanitation issues to identify long-term reputation patterns.
-                      </p>
-                    </div>
-                  </ExternalCard>
+                  {/* Real Review Evidence - Only show if there is any, or if not RevenueLeadership */}
+                  {(reviewEvidence.length > 0 || spark.strategy !== "RevenueLeadership") && (
+                    <ExternalCard className="rounded-xl">
+                      <h3 className="font-serif text-xl text-[#1B4D3E] mb-6">Evidence from Reviews</h3>
+                      <div className="space-y-4">
+                        {reviewEvidence.map((review, idx) => (
+                          <ExternalEvidenceQuote
+                            key={idx}
+                            quote={review.textSnippet}
+                            source={review.source}
+                            date={new Date(review.reviewDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}
+                            tags={review.tags.join(', ')}
+                          />
+                        ))}
+                      </div>
+                      <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                        <p className="text-sm text-gray-600">
+                          <span className="font-medium">Method:</span> Analyzed all-time reviews across Google, Yelp, and Apartments.com. 
+                          Tagged by relevance to trash/sanitation issues to identify long-term reputation patterns.
+                        </p>
+                      </div>
+                    </ExternalCard>
+                  )}
                 </div>
               </div>
             </ExternalSection>
