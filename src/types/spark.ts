@@ -75,11 +75,12 @@ export interface PitchPageData {
   spark: Spark;
   preparedDate: string;
   preparedFor: string;
-  executiveSnapshot: {
+    executiveSnapshot: {
     residentFrictionSignal: "Optimization" | "Friction" | "Critical";
     currentVendorPerformance: number;
     noiUpsideMin: number;
     noiUpsideMax: number;
+    isUndercutQuote?: boolean;
   };
   reviewDeepDive: {
     recurringThemes: string[];

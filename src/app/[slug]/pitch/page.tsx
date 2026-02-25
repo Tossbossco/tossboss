@@ -21,6 +21,7 @@ function composePitchData(spark: Spark): PitchPageData {
       currentVendorPerformance: spark.vendorScorecard.provisionalScore,
       noiUpsideMin: spark.noiOpportunity.minAmount,
       noiUpsideMax: spark.noiOpportunity.maxAmount,
+      isUndercutQuote: spark.slug === "the-statesman",
     },
     reviewDeepDive: {
       recurringThemes: spark.reviewDeepDive?.recurringThemes || [
@@ -39,16 +40,24 @@ function composePitchData(spark: Spark): PitchPageData {
       "Slow response to service failures",
     ],
     noiBreakdown: {
-      currentLeakage: spark.noiBreakdown?.currentLeakage || [
+      currentLeakage: spark.noiBreakdown?.currentLeakage || (spark.strategy === "RevenueLeadership" ? [
+        "National vendor corporate overhead: ~$4,200/year",
+        "Margin compression from rigid pricing: ~$3,800/year",
+        "Maintenance staff 'touch-up' time: ~$2,400/year",
+      ] : [
         "Staff time handling complaints: ~$3,200/year",
         "Reputation impact on renewal rates: ~$4,800/year",
         "Avoidable maintenance from spills: ~$2,100/year",
-      ],
-      optimizedEconomics: spark.noiBreakdown?.optimizedEconomics || [
+      ]),
+      optimizedEconomics: spark.noiBreakdown?.optimizedEconomics || (spark.strategy === "RevenueLeadership" ? [
+        "Elimination of 'National Brand Tax'",
+        "Direct-to-operator cost structure",
+        "Maximized ancillary revenue spread",
+      ] : [
         "Resident satisfaction improvement: +12% retention",
         "Reduced office burden: 5hrs/week saved",
         "NOI optimization through better pricing",
-      ],
+      ]),
       scenarios: spark.noiBreakdown?.scenarios || {
         conservative: spark.noiOpportunity.minAmount,
         base: Math.round((spark.noiOpportunity.minAmount + spark.noiOpportunity.maxAmount) / 2),

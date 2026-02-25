@@ -181,9 +181,11 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                   </ExternalCard>
 
                   <ExternalCard tone="dark" className="rounded-xl">
-                    <div className="text-sm text-[#7CB98A] mb-2">Annual NOI Upside</div>
+                    <div className="text-sm text-[#7CB98A] mb-2">
+                      {executiveSnapshot.isUndercutQuote ? "Direct Annual Savings" : "Annual NOI Upside"}
+                    </div>
                     <div className="font-serif text-4xl text-white">
-                      ${(executiveSnapshot.noiUpsideMin / 1000).toFixed(0)}k-${(executiveSnapshot.noiUpsideMax / 1000).toFixed(0)}k
+                      ${(executiveSnapshot.noiUpsideMin / 1000).toFixed(1)}k-${(executiveSnapshot.noiUpsideMax / 1000).toFixed(1)}k
                     </div>
                   </ExternalCard>
                 </div>

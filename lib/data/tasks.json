@@ -111,5 +111,15 @@
       "category": "marketing",
       "notes": "Alan's Pivot: For properties with low/no bad reviews, the 'Audit' feels weak. Need to reframe as 'Asset Optimization'. Focus on why TossBoss is cheaper than national vendors and how we maximize the NOI spread (Revenue vs. Cost) better than anyone else."
     }
+    {
+      "id": "task-13",
+      "task": "Deliver Aggressive Undercut Quote to The Statesman PM",
+      "xpReward": 100,
+      "priority": "high",
+      "dueDate": "2026-02-17",
+      "completed": false,
+      "category": "sales",
+      "notes": "Current vendor: $13.25/door. TossBoss Quote: $11.50/door. Highlight $7,056 annual NOI boost."
+    },
   ]
 }
