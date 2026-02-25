@@ -535,21 +535,17 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
                   <ExternalCard tone="dark" className="rounded-xl text-center">
                     <div className="w-16 h-16 rounded-full bg-white/10 mx-auto mb-4 flex items-center justify-center">
                       <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                     </div>
-                    <h3 className="font-serif text-xl text-white mb-2">Approve Transition</h3>
-                    <p className="text-white/70 text-sm mb-6">Lock in your start date and begin implementation</p>
-                    <button 
-                      onClick={() => {
-                        const intent = captureTransitionIntent("approve_transition", spark.slug, "standard", "30 days");
-                        console.log("Transition Intent:", intent);
-                        alert("Transition approval captured! In production, this would create a proposal/checkout session.");
-                      }}
-                      className={externalButtonClass("ghost", "w-full !bg-white !text-[#1B4D3E] !border-0 py-3 hover:!bg-gray-100")}
+                    <h3 className="font-serif text-xl text-white mb-2">Formal Quote</h3>
+                    <p className="text-white/70 text-sm mb-6">One-page financial summary for ownership review</p>
+                    <Link 
+                      href={`/${spark.slug}/quote`}
+                      className={externalButtonClass("ghost", "w-full !bg-white !text-[#1B4D3E] !border-0 py-3 block text-center")}
                     >
-                      Get Started
-                    </button>
+                      View Quote
+                    </Link>
                   </ExternalCard>
 
                   <ExternalCard className="rounded-xl text-center">

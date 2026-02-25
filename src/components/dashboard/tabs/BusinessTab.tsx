@@ -8,6 +8,7 @@ import {
   ChevronDown,
   ChevronRight,
   ExternalLink,
+  FileText,
   Globe,
   MapPin,
   Package,
@@ -268,6 +269,15 @@ function PropertyRow({ property, isPrimary }: { property: Property; isPrimary?: 
             >
               <ExternalLink size={12} />
               PITCH_DECK
+            </a>
+            <a 
+              href={`/${property.id === 'prop-statesman' ? 'the-statesman' : property.id === 'prop-columns' ? 'the-columns-at-pilgrim-mill' : property.id === 'prop-arbors' ? 'arbors-at-lake-lanier' : property.id === 'prop-saddleview' ? 'saddleview-apartments' : property.id.replace('prop-', '')}/quote`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-[#1B4D3E] text-white border border-white/10 text-[11px] font-medium hover:bg-[#2D5A45] transition-all"
+            >
+              <FileText size={12} />
+              FORMAL_QUOTE
             </a>
           </div>
         </div>
