@@ -94,15 +94,15 @@ export default function QuotePage({ spark }: QuotePageProps) {
           </h2>
           <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
             {[
-              "5-Night Doorstep Collection (Sun-Thu)",
-              "Nightly Dumpster Area Tidying",
-              "Minor Spill Response & Cleanup",
-              "Resident Education & Onboarding",
-              "Direct Account Manager Access",
-              "Local Accountability (Cumming, GA)",
-              "No 'National Brand' Overhead Tax",
-              "14-Day Seamless Transition Guarantee"
-            ].map((item, idx) => (
+            "5-Night Doorstep Collection (Tue-Sat)",
+            "Nightly Dumpster Area Tidying",
+            "Minor Spill Response & Cleanup",
+            "Resident Education & Onboarding",
+            "Direct Account Manager Access",
+            "Local Accountability (Cumming, GA)",
+            "No 'National Brand' Overhead Tax",
+            "14-Day Seamless Transition Guarantee"
+          ].map((item, idx) => (
               <div key={idx} className="flex items-center gap-3 py-2 border-b border-gray-50">
                 <CheckCircle2 className="text-[#2D5A45] flex-shrink-0" size={18} />
                 <span className="text-gray-700 text-sm">{item}</span>
