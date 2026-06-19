@@ -143,5 +143,15 @@
       "completedDate": "2026-06-19",
       "notes": "Focus on reliability and local responsiveness to beat their current national vendor."
     },
+    {
+      "id": "task-16",
+      "task": "Walk-in to The Foundry: Deliver Spark Page to PM",
+      "xpReward": 150,
+      "priority": "high",
+      "dueDate": "2026-06-20",
+      "completed": false,
+      "category": "sales",
+      "notes": "98 Buford Dam Rd. Ask for the Property Manager. Deliver the 'Local Advantage' pitch and Spark link."
+    },
   ]
 }
