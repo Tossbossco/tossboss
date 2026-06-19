@@ -23,6 +23,8 @@
   "noiOpportunity": {
     "minAmount": 4000,
     "maxAmount": 8000,
+    "currentRate": 13.50,
+    "proposedRate": 12.25,
     "assumptions": [
       "Current estimated vendor pricing: $13.50/door",
       "TossBoss target pricing: $12.25/door",

@@ -21,11 +21,11 @@ export default function QuotePage({ spark }: QuotePageProps) {
     year: "numeric",
   });
 
-  // Financial calculations based on the Statesman example or generic defaults
-  const currentRate = 13.25;
-  const proposedRate = 11.50;
+  // Financial calculations based on the spark data or generic defaults
+  const currentRate = spark.noiOpportunity.currentRate || 13.25;
+  const proposedRate = spark.noiOpportunity.proposedRate || 11.50;
   const monthlySavings = (currentRate - proposedRate) * spark.units;
-  const annualSavings = monthlySavings * 12;
+  const annualSavings = spark.noiOpportunity.minAmount || monthlySavings * 12;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans pb-20">

@@ -23,6 +23,8 @@ export interface Spark {
   noiOpportunity: {
     minAmount: number;
     maxAmount: number;
+    currentRate?: number;
+    proposedRate?: number;
     assumptions?: string[];
   };
   // Optional full data for Stage 2

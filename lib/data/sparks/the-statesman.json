@@ -21,6 +21,8 @@
   "noiOpportunity": {
     "minAmount": 7056,
     "maxAmount": 14112,
+    "currentRate": 13.25,
+    "proposedRate": 11.50,
     "assumptions": [
       "Current vendor pricing: $13.25/door",
       "TossBoss undercut pricing: $11.50/door",
