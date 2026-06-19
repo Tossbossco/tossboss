@@ -1,0 +1,81 @@
+{
+  "slug": "foundry-mashburn-village",
+  "businessName": "The Foundry at Mashburn Village",
+  "units": 320,
+  "strategy": "RevenueLeadership",
+  "preparedFor": "Property Manager",
+  "preparedDate": "2026-06-19",
+  "reviewRiskScan": {
+    "riskSignal": "Low",
+    "mentionsCount": 1,
+    "mostCommonIssue": "Onboarding delays / Missing trash cans"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 70,
+    "confidence": "medium",
+    "dimensions": {
+      "reliability": 70,
+      "residentExperience": 70,
+      "issueResponse": 70,
+      "communication": 70
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 6400,
+    "maxAmount": 12800,
+    "assumptions": [
+      "Current estimated vendor pricing: $13.50/door",
+      "TossBoss target pricing: $11.50/door",
+      "Total units: 320",
+      "Direct annual savings: $7,680",
+      "Recovered maintenance time: 5+ hours/week"
+    ]
+  },
+  "reviewDeepDive": {
+    "recurringThemes": [
+      "New resident onboarding friction",
+      "Inconsistent initial setup",
+      "High-end amenity expectations"
+    ],
+    "frequencyAndRecency": "Single recent high-impact onboarding failure noted.",
+    "impactOnReputation": "Minor friction that affects the crucial 'first 72 hours' of the resident experience."
+  },
+  "vendorGaps": [
+    "National vendor lack of local oversight",
+    "Slow response to move-in requests",
+    "Rigid scheduling that misses new move-ins"
+  ],
+  "noiBreakdown": {
+    "currentLeakage": [
+      "Maintenance staff handling missed bin deliveries",
+      "Leasing office time spent on valet complaints"
+    ],
+    "optimizedEconomics": [
+      "Direct cost reduction per door",
+      "Zero-friction onboarding guarantee"
+    ],
+    "scenarios": {
+      "conservative": 6400,
+      "base": 7680,
+      "upside": 12800
+    }
+  },
+  "switchPlan": {
+    "days1to3": [
+      "Inventory audit of all units",
+      "Direct coordination with leasing office for move-in schedule"
+    ],
+    "days4to7": [
+      "Resident notification of service upgrade",
+      "Bin replacement/audit completion"
+    ],
+    "days8to14": [
+      "Full service transition",
+      "First weekly performance report to PM"
+    ],
+    "riskControls": [
+      "Local backup valet on-call for move-ins",
+      "Direct text line for PM for immediate issues"
+    ]
+  }
+}

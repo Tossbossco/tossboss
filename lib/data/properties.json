@@ -3,11 +3,11 @@
     {
       "id": "prop-statesman",
       "name": "The Statesman",
-      "status": "prospect",
+      "status": "dormant",
       "units": 252,
       "tier": null,
       "address": "1600 Ronald Reagan Blvd, Cumming, GA 30041",
-      "notes": "Luxury complex managed by Harbor Group. \n\nSTRATEGY: 'Review Risk' Pitch. \nFound 4 specific resident complaints about inconsistent timing and weekend dumpster mess. \n\nNEXT MOVE: Walk-in Wednesday morning to deliver Spark Page link to Property Manager.",
+      "notes": "Dud. No longer prioritizing. \n\nFOLLOW UP: End of 2026. \n\nPREVIOUS STRATEGY: 'Review Risk' Pitch. Found 4 specific resident complaints about inconsistent timing and weekend dumpster mess.",
       "contacts": [
         {
           "name": "Property Manager",
@@ -79,6 +79,26 @@
         }
       ],
       "createdDate": "2026-02-16"
+    },
+    {
+      "id": "prop-foundry",
+      "name": "The Foundry at Mashburn Village",
+      "status": "prospect",
+      "units": 320,
+      "tier": null,
+      "address": "98 Buford Dam Rd, Cumming, GA 30040",
+      "notes": "Greystar managed. ALREADY HAS VALET TRASH. \n\nSTRATEGY: 'Service Reliability' Pitch. \nFound resident grievance about not receiving a trash can for 3.5 days after move-in. Greystar properties often use national vendors; focus on being local, responsive, and eliminating move-in friction. \n\nNEXT MOVE: Walk-in to meet the PM and deliver a 'Local Advantage' Spark Page.",
+      "contacts": [
+        {
+          "name": "Property Manager",
+          "role": "Decision Maker",
+          "phone": "(470) 660-5569",
+          "email": null,
+          "lastContact": "—",
+          "notes": "Target for 'Local Reliability' pitch."
+        }
+      ],
+      "createdDate": "2026-06-19"
     }
   ]
 }

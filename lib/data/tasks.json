@@ -119,7 +119,29 @@
       "dueDate": "2026-02-17",
       "completed": false,
       "category": "sales",
-      "notes": "Current vendor: $13.25/door. TossBoss Quote: $11.50/door. Highlight $7,056 annual NOI boost."
+      "status": "cancelled",
+      "notes": "Current vendor: $13.25/door. TossBoss Quote: $11.50/door. Highlight $7,056 annual NOI boost. (Cancelled: Dud property)"
+    },
+    {
+      "id": "task-14",
+      "task": "Follow up with The Statesman",
+      "xpReward": 25,
+      "priority": "low",
+      "dueDate": "2026-12-15",
+      "completed": false,
+      "category": "sales",
+      "notes": "Check in at the end of the year to see if management or vendor situation has changed."
+    },
+    {
+      "id": "task-15",
+      "task": "Generate 'Local Advantage' Spark Page for The Foundry",
+      "xpReward": 75,
+      "priority": "high",
+      "dueDate": "2026-06-19",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-19",
+      "notes": "Focus on reliability and local responsiveness to beat their current national vendor."
     },
   ]
 }
