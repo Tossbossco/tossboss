@@ -1,0 +1,83 @@
+{
+  "slug": "heights-sawnee-village",
+  "businessName": "The Heights at Sawnee Village",
+  "units": 262,
+  "strategy": "RevenueLeadership",
+  "preparedFor": "Property Manager",
+  "preparedDate": "2026-06-20",
+  "reviewRiskScan": {
+    "riskSignal": "Optimization",
+    "mentionsCount": 0,
+    "mostCommonIssue": "Ancillary Revenue Leakage"
+  },
+  "vendorScorecard": {
+    "provisionalScore": 85,
+    "confidence": "medium",
+    "dimensions": {
+      "reliability": 85,
+      "residentExperience": 90,
+      "issueResponse": 80,
+      "communication": 85
+    }
+  },
+  "noiOpportunity": {
+    "minAmount": 5240,
+    "maxAmount": 10480,
+    "currentRate": 13.50,
+    "proposedRate": 12.25,
+    "assumptions": [
+      "Current estimated vendor pricing: $13.50/door",
+      "TossBoss target pricing: $12.25/door",
+      "Total units: 262",
+      "Direct annual savings: $3,930",
+      "Hidden labor recovery: 4+ hours/week"
+    ]
+  },
+  "reviewDeepDive": {
+    "recurringThemes": [
+      "Brand new property expectations",
+      "High-end luxury standards",
+      "Operational efficiency focus"
+    ],
+    "frequencyAndRecency": "No negative trash mentions found in 12 recent reviews.",
+    "impactOnReputation": "Clean reputation is a high-performance baseline that requires local precision to maintain as the property stabilizes."
+  },
+  "vendorGaps": [
+    "National vendor corporate overhead tax",
+    "Lack of local ownership accountability",
+    "Rigid national contract structures"
+  ],
+  "noiBreakdown": {
+    "currentLeakage": [
+      "National vendor corporate markup: ~$3,200/year",
+      "Maintenance staff 'grounds' time: ~$2,000/year"
+    ],
+    "optimizedEconomics": [
+      "Direct-to-operator cost reduction",
+      "Local accountability guarantee"
+    ],
+    "scenarios": {
+      "conservative": 5240,
+      "base": 6500,
+      "upside": 10480
+    }
+  },
+  "switchPlan": {
+    "days1to3": [
+      "Inventory audit of all 262 units",
+      "Coordination with RAM Partners management team"
+    ],
+    "days4to7": [
+      "Resident notification of service precision upgrade",
+      "Bin audit and replacement where needed"
+    ],
+    "days8to14": [
+      "Full service transition",
+      "First performance report delivered to PM"
+    ],
+    "riskControls": [
+      "No-gap service transition guarantee",
+      "Direct text line to TossBoss ownership"
+    ]
+  }
+}

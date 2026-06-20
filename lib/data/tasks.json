@@ -149,9 +149,41 @@
       "xpReward": 150,
       "priority": "high",
       "dueDate": "2026-06-20",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-20",
+      "notes": "98 Buford Dam Rd. Attempted walk-in (PM absent). Followed up with email + Spark link."
+    },
+    {
+      "id": "task-17",
+      "task": "Follow up with The Foundry PM",
+      "xpReward": 50,
+      "priority": "medium",
+      "dueDate": "2026-06-23",
       "completed": false,
       "category": "sales",
-      "notes": "98 Buford Dam Rd. Ask for the Property Manager. Deliver the 'Local Advantage' pitch and Spark link."
+      "notes": "Check for response to the Spark Page email sent on Saturday."
+    },
+    {
+      "id": "task-18",
+      "task": "Generate Spark Page for The Heights at Sawnee Village",
+      "xpReward": 75,
+      "priority": "high",
+      "dueDate": "2026-06-20",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-20",
+      "notes": "Focus on cost arbitrage and national vendor tax recovery."
+    },
+    {
+      "id": "task-19",
+      "task": "Walk-in to The Heights at Sawnee Village: Deliver Spark Page",
+      "xpReward": 150,
+      "priority": "high",
+      "dueDate": "2026-06-20",
+      "completed": false,
+      "category": "sales",
+      "notes": "525 Sawnee Village Blvd. Ask for the PM. Deliver the 'Revenue Leadership' pitch."
     },
   ]
 }

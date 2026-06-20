@@ -87,18 +87,38 @@
       "units": 320,
       "tier": null,
       "address": "98 Buford Dam Rd, Cumming, GA 30040",
-      "notes": "Greystar managed. ALREADY HAS VALET TRASH. \n\nSTRATEGY: 'Service Reliability' Pitch. \nFound resident grievance about not receiving a trash can for 3.5 days after move-in. Greystar properties often use national vendors; focus on being local, responsive, and eliminating move-in friction. \n\nNEXT MOVE: Walk-in to meet the PM and deliver a 'Local Advantage' Spark Page.",
+      "notes": "Greystar managed. ALREADY HAS VALET TRASH. \n\nSTRATEGY: 'Service Reliability' Pitch. \nFound resident grievance about not receiving a trash can for 3.5 days after move-in. Greystar properties often use national vendors; focus on being local, responsive, and eliminating move-in friction. \n\nOUTREACH: Attempted walk-in 6/20 (PM absent). Sent Spark Page via email.",
       "contacts": [
         {
           "name": "Property Manager",
           "role": "Decision Maker",
           "phone": "(470) 660-5569",
           "email": null,
-          "lastContact": "—",
-          "notes": "Target for 'Local Reliability' pitch."
+          "lastContact": "2026-06-20",
+          "notes": "Target for 'Local Reliability' pitch. Spark link sent via email."
         }
       ],
       "createdDate": "2026-06-19"
+    },
+    {
+      "id": "prop-heights-sawnee",
+      "name": "The Heights at Sawnee Village",
+      "status": "prospect",
+      "units": 262,
+      "tier": null,
+      "address": "525 Sawnee Village Blvd, Cumming, GA 30040",
+      "notes": "RAM Partners managed. Built in 2024. \n\nSTRATEGY: 'Revenue Leadership' Pitch. \nReviews are clean (5.0 stars), so focus on cost arbitrage and recovering the 'National Vendor Tax'. \n\nNEXT MOVE: Walk-in to meet the PM and deliver Spark Page.",
+      "contacts": [
+        {
+          "name": "Property Manager",
+          "role": "Decision Maker",
+          "phone": "(470) 281-3399",
+          "email": null,
+          "lastContact": "—",
+          "notes": "Target for 'Cost Arbitrage' pitch."
+        }
+      ],
+      "createdDate": "2026-06-20"
     }
   ]
 }
