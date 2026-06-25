@@ -4,6 +4,7 @@
   "units": 320,
   "strategy": "RevenueLeadership",
   "serviceSchedule": "Sun-Thu",
+  "standaloneQuote": true,
   "preparedFor": "Property Manager",
   "preparedDate": "2026-06-25",
   "reviewRiskScan": {

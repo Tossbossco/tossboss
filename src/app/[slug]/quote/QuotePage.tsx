@@ -1,11 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Spark } from "@/types/spark";
 import {
-  ExternalSection,
-  ExternalCard,
-  ExternalMetric,
   externalButtonClass,
 } from "@/components/external/design-system";
 import { Printer, FileText, CheckCircle2, ShieldCheck, Zap } from "lucide-react";
@@ -28,10 +24,7 @@ export default function QuotePage({ spark }: QuotePageProps) {
     <div className="min-h-screen bg-white text-gray-900 font-sans pb-20">
       {/* Top Bar - Non-print */}
       <div className="bg-[#1B4D3E] py-3 px-6 no-print">
-        <div className="max-w-4xl mx-auto flex justify-between items-center">
-          <Link href={`/${spark.slug}/pitch`} className="text-white/80 hover:text-white text-sm flex items-center gap-2">
-            ← Back to Pitch
-          </Link>
+        <div className="max-w-4xl mx-auto flex justify-end items-center">
           <button 
             onClick={() => window.print()}
             className="bg-white/10 hover:bg-white/20 text-white text-xs font-medium px-4 py-2 rounded-full flex items-center gap-2 transition-colors"

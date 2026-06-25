@@ -4,6 +4,7 @@ export interface Spark {
   units: number;
   strategy: "RiskAudit" | "RevenueLeadership";
   serviceSchedule?: string;
+  standaloneQuote?: boolean;
   preparedFor?: string;
   preparedDate?: string;
   reviewRiskScan: {
