@@ -87,15 +87,15 @@
       "units": 320,
       "tier": null,
       "address": "98 Buford Dam Rd, Cumming, GA 30040",
-      "notes": "Greystar managed. ALREADY HAS VALET TRASH. \n\nSTRATEGY: 'Service Reliability' Pitch. \nFound resident grievance about not receiving a trash can for 3.5 days after move-in. Greystar properties often use national vendors; focus on being local, responsive, and eliminating move-in friction. \n\nOUTREACH: Attempted walk-in 6/20 (PM absent). Sent Spark Page via email.",
+      "notes": "Greystar managed. ALREADY HAS VALET TRASH. \n\nSTRATEGY: 'Service Reliability' Pitch. \nFound resident grievance about not receiving a trash can for 3.5 days after move-in. Greystar properties often use national vendors; focus on being local, responsive, and eliminating move-in friction. \n\nOUTREACH: Walk-in 6/20 (PM absent). Spark sent 6/20. In-person with Adriana 6/25. Formal quote emailed 6/25. Awaiting green light.",
       "contacts": [
         {
-          "name": "Property Manager",
-          "role": "Decision Maker",
+          "name": "Adriana",
+          "role": "Property Manager",
           "phone": "(470) 660-5569",
-          "email": null,
-          "lastContact": "2026-06-20",
-          "notes": "Target for 'Local Reliability' pitch. Spark link sent via email."
+          "email": "foundrymashburnmgr@greystar.com",
+          "lastContact": "2026-06-25",
+          "notes": "Decision maker. Received formal quote at $11.50/door, Sun-Thu. NetVendor onboarding pending her confirmation."
         }
       ],
       "createdDate": "2026-06-19"
@@ -107,15 +107,15 @@
       "units": 262,
       "tier": null,
       "address": "525 Sawnee Village Blvd, Cumming, GA 30040",
-      "notes": "RAM Partners managed. Built in 2024. \n\nSTRATEGY: 'Revenue Leadership' Pitch. \nReviews are clean (5.0 stars), so focus on cost arbitrage and recovering the 'National Vendor Tax'. \n\nNEXT MOVE: Walk-in to meet the PM and deliver Spark Page.",
+      "notes": "RAM Partners managed. Built in 2024. \n\nSTRATEGY: 'Revenue Leadership' Pitch — long-game plant. Year 2 of 5-year Valet Living contract; PM (Ines) says switch unlikely before term ends but requested a quote. \n\nVISIT: Met Ines in person 6/25. Send standalone quote ($11.50/door, Sun-Thu, 262 units).",
       "contacts": [
         {
-          "name": "Property Manager",
-          "role": "Decision Maker",
+          "name": "Ines",
+          "role": "Property Manager",
           "phone": "(470) 281-3399",
           "email": null,
-          "lastContact": "—",
-          "notes": "Target for 'Cost Arbitrage' pitch."
+          "lastContact": "2026-06-25",
+          "notes": "Year 2 of 5-year Valet Living contract. Asked for quote despite low near-term switch odds."
         }
       ],
       "createdDate": "2026-06-20"

@@ -160,9 +160,10 @@
       "xpReward": 50,
       "priority": "medium",
       "dueDate": "2026-06-23",
-      "completed": false,
+      "completed": true,
       "category": "sales",
-      "notes": "Check for response to the Spark Page email sent on Saturday."
+      "completedDate": "2026-06-25",
+      "notes": "PM engaged in person; proposal email with quote sent to Adriana."
     },
     {
       "id": "task-18",
@@ -181,9 +182,10 @@
       "xpReward": 150,
       "priority": "high",
       "dueDate": "2026-06-20",
-      "completed": false,
+      "completed": true,
       "category": "sales",
-      "notes": "525 Sawnee Village Blvd. Ask for the PM. Deliver the 'Revenue Leadership' pitch."
+      "completedDate": "2026-06-25",
+      "notes": "Met PM Ines in person. Year 2 of Valet Living contract; she requested a quote anyway."
     },
     {
       "id": "task-20",
@@ -232,9 +234,10 @@
       "xpReward": 50,
       "priority": "high",
       "dueDate": "2026-06-25",
-      "completed": false,
+      "completed": true,
       "category": "sales",
-      "notes": "Include the updated quote link and the 'Local Advantage' pitch."
+      "completedDate": "2026-06-25",
+      "notes": "Sent to Adriana with standalone quote link and NetVendor onboarding note."
     },
     {
       "id": "task-25",
@@ -245,6 +248,27 @@
       "completed": false,
       "category": "sales",
       "notes": "Do not start NetVendor/Insurance until they confirm interest in the quote."
+    },
+    {
+      "id": "task-26",
+      "task": "Update Heights Quote with PM data",
+      "xpReward": 25,
+      "priority": "high",
+      "dueDate": "2026-06-25",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-25",
+      "notes": "262 units, Sun-Thu schedule, $11.50/door — matched Foundry quote format."
+    },
+    {
+      "id": "task-27",
+      "task": "Send proposal email to Heights PM (Ines)",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-06-25",
+      "completed": false,
+      "category": "sales",
+      "notes": "Standalone quote link. Acknowledge Valet Living contract; plant seed for renewal window."
     },
   ]
 }
