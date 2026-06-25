@@ -22,10 +22,7 @@ export default function QuotePage({ spark }: QuotePageProps) {
   });
 
   // Financial calculations based on the spark data or generic defaults
-  const currentRate = spark.noiOpportunity.currentRate || 13.25;
   const proposedRate = spark.noiOpportunity.proposedRate || 11.50;
-  const monthlySavings = (currentRate - proposedRate) * spark.units;
-  const annualSavings = spark.noiOpportunity.minAmount || monthlySavings * 12;
 
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans pb-20">
@@ -67,17 +64,12 @@ export default function QuotePage({ spark }: QuotePageProps) {
         </div>
 
         {/* Executive Summary */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="max-w-md mb-12">
           <div className="bg-[#E8F5E9] p-8 rounded-xl border border-[#2D5A45]/20 relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-[#2D5A45] text-white text-[10px] px-3 py-1 font-bold rounded-bl-lg">PROPOSED</div>
             <div className="text-xs uppercase tracking-wider text-[#2D5A45] font-bold mb-2">TossBoss Rate</div>
-            <div className="text-4xl font-serif text-[#1B4D3E] font-bold">${proposedRate.toFixed(2)}</div>
+            <div className="text-5xl font-serif text-[#1B4D3E] font-bold">${proposedRate.toFixed(2)}</div>
             <div className="text-sm text-[#2D5A45] mt-1 font-medium">per door / month</div>
-          </div>
-          <div className="bg-[#1B4D3E] p-8 rounded-xl text-white shadow-lg shadow-[#1B4D3E]/20">
-            <div className="text-xs uppercase tracking-wider text-white/60 font-bold mb-2">Projected Annual Savings</div>
-            <div className="text-4xl font-serif font-bold text-[#7CB98A]">${annualSavings.toLocaleString()}</div>
-            <div className="text-sm text-white/60 mt-1">Direct NOI Impact</div>
           </div>
         </div>
 
