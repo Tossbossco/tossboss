@@ -3,19 +3,20 @@
   "businessName": "TossBoss",
   "level": 6,
   "title": "Capo",
-  "xp": 1750,
+  "xp": 1775,
   "xpToNextLevel": 2200,
-  "totalXpEarned": 1750,
+  "totalXpEarned": 1775,
   "streak": {
     "current": 2,
     "longest": 2,
-    "lastActiveDate": "2026-06-20",
+    "lastActiveDate": "2026-06-25",
     "multiplier": 1
   },
   "dailyXp": {
     "2026-02-16": 1525,
     "2026-06-19": 75,
-    "2026-06-20": 150
+    "2026-06-20": 150,
+    "2026-06-25": 25
   },
   "stats": {
     "sales": 12,

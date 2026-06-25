@@ -185,5 +185,66 @@
       "category": "sales",
       "notes": "525 Sawnee Village Blvd. Ask for the PM. Deliver the 'Revenue Leadership' pitch."
     },
+    {
+      "id": "task-20",
+      "task": "Get General Liability insurance quote ($1M/$2M)",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-06-26",
+      "completed": false,
+      "category": "operations",
+      "notes": "Required for NetVendor/Compliance Depot. Ask for 'Blanket Additional Insured' endorsement."
+    },
+    {
+      "id": "task-21",
+      "task": "Apply for Forsyth County Occupational Tax Certificate",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-06-26",
+      "completed": false,
+      "category": "operations",
+      "notes": "Local business license required by vendor portals. Apply via Forsyth CSS portal."
+    },
+    {
+      "id": "task-22",
+      "task": "Prepare signed W-9 PDF",
+      "xpReward": 25,
+      "priority": "medium",
+      "dueDate": "2026-06-26",
+      "completed": false,
+      "category": "finance",
+      "notes": "Standard requirement for all vendor portals. Use your EIN."
+    },
+    {
+      "id": "task-23",
+      "task": "Update Foundry Quote with PM's exact data",
+      "xpReward": 25,
+      "priority": "high",
+      "dueDate": "2026-06-25",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-25",
+      "notes": "Sync the quote page with the units and schedule provided by the PM."
+    },
+    {
+      "id": "task-24",
+      "task": "Send proposal email to Foundry PM",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-06-25",
+      "completed": false,
+      "category": "sales",
+      "notes": "Include the updated quote link and the 'Local Advantage' pitch."
+    },
+    {
+      "id": "task-25",
+      "task": "Await Foundry PM 'Green Light' for onboarding",
+      "xpReward": 100,
+      "priority": "medium",
+      "dueDate": "2026-07-01",
+      "completed": false,
+      "category": "sales",
+      "notes": "Do not start NetVendor/Insurance until they confirm interest in the quote."
+    },
   ]
 }
