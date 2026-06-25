@@ -3,6 +3,7 @@
   "businessName": "The Foundry at Mashburn Village",
   "units": 320,
   "strategy": "RevenueLeadership",
+  "serviceSchedule": "Sun-Thu",
   "preparedFor": "Property Manager",
   "preparedDate": "2026-06-25",
   "reviewRiskScan": {

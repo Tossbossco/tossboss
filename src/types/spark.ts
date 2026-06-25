@@ -3,6 +3,7 @@ export interface Spark {
   businessName: string;
   units: number;
   strategy: "RiskAudit" | "RevenueLeadership";
+  serviceSchedule?: string;
   preparedFor?: string;
   preparedDate?: string;
   reviewRiskScan: {

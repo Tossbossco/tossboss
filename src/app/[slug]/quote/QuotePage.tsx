@@ -81,7 +81,7 @@ export default function QuotePage({ spark }: QuotePageProps) {
           </h2>
           <div className="grid sm:grid-cols-2 gap-x-12 gap-y-4">
             {[
-            "5-Night Doorstep Collection (Tue-Sat)",
+            `5-Night Doorstep Collection (${spark.serviceSchedule || "Sun-Thu"})`,
             "Nightly Dumpster Area Tidying",
             "Minor Spill Response & Cleanup",
             "Resident Education & Onboarding",
