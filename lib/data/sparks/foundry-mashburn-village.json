@@ -21,15 +21,15 @@
     }
   },
   "noiOpportunity": {
-    "minAmount": 4000,
-    "maxAmount": 8000,
+    "minAmount": 6400,
+    "maxAmount": 12800,
     "currentRate": 13.50,
-    "proposedRate": 12.25,
+    "proposedRate": 11.50,
     "assumptions": [
       "Current estimated vendor pricing: $13.50/door",
-      "TossBoss target pricing: $12.25/door",
+      "TossBoss target pricing: $11.50/door",
       "Total units: 320",
-      "Direct annual savings: $4,800",
+      "Direct annual savings: $7,680",
       "Recovered maintenance time: 5+ hours/week"
     ]
   },
@@ -57,9 +57,9 @@
       "Zero-friction onboarding guarantee"
     ],
     "scenarios": {
-      "conservative": 4000,
-      "base": 4800,
-      "upside": 8000
+      "conservative": 6400,
+      "base": 7680,
+      "upside": 12800
     }
   },
   "switchPlan": {
