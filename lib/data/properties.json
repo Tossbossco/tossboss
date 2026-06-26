@@ -3,19 +3,19 @@
     {
       "id": "prop-statesman",
       "name": "The Statesman",
-      "status": "dormant",
+      "status": "prospect",
       "units": 252,
       "tier": null,
       "address": "1600 Ronald Reagan Blvd, Cumming, GA 30041",
-      "notes": "Dud. No longer prioritizing. \n\nFOLLOW UP: End of 2026. \n\nPREVIOUS STRATEGY: 'Review Risk' Pitch. Found 4 specific resident complaints about inconsistent timing and weekend dumpster mess.",
+      "notes": "REACTIVATED 6/25. Harbor Group managed. \n\nSTRATEGY: 'Review Risk' + undercut pitch. Resident complaints on inconsistent timing and weekend dumpster mess. Current vendor ~$13.25/door. \n\nVISIT: Stopped by 6/25 to reintroduce TossBoss. PM Courtney asked for quote via email Monday.",
       "contacts": [
         {
-          "name": "Property Manager",
-          "role": "Decision Maker",
+          "name": "Courtney",
+          "role": "Property Manager",
           "phone": "(678) 658-3614",
           "email": null,
-          "lastContact": "—",
-          "notes": "Target for first Spark Page delivery."
+          "lastContact": "2026-06-25",
+          "notes": "Requested formal quote by email on Monday 6/30."
         }
       ],
       "createdDate": "2026-02-16"

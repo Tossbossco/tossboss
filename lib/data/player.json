@@ -1,11 +1,11 @@
 {
   "name": "Alan",
   "businessName": "TossBoss",
-  "level": 6,
-  "title": "Capo",
-  "xp": 2000,
-  "xpToNextLevel": 2200,
-  "totalXpEarned": 2000,
+  "level": 7,
+  "title": "Consigliere",
+  "xp": 2225,
+  "xpToNextLevel": 3000,
+  "totalXpEarned": 2225,
   "streak": {
     "current": 2,
     "longest": 2,
@@ -16,10 +16,10 @@
     "2026-02-16": 1525,
     "2026-06-19": 75,
     "2026-06-20": 150,
-    "2026-06-25": 375
+    "2026-06-25": 600
   },
   "stats": {
-    "sales": 15,
+    "sales": 18,
     "operations": 0,
     "marketing": 0,
     "finance": 0,

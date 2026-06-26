@@ -110,7 +110,7 @@
       "completed": false,
       "category": "marketing",
       "notes": "Alan's Pivot: For properties with low/no bad reviews, the 'Audit' feels weak. Need to reframe as 'Asset Optimization'. Focus on why TossBoss is cheaper than national vendors and how we maximize the NOI spread (Revenue vs. Cost) better than anyone else."
-    }
+    },
     {
       "id": "task-13",
       "task": "Deliver Aggressive Undercut Quote to The Statesman PM",
@@ -128,9 +128,10 @@
       "xpReward": 25,
       "priority": "low",
       "dueDate": "2026-12-15",
-      "completed": false,
+      "completed": true,
       "category": "sales",
-      "notes": "Check in at the end of the year to see if management or vendor situation has changed."
+      "completedDate": "2026-06-25",
+      "notes": "Superseded by in-person reintroduction with Courtney 6/25."
     },
     {
       "id": "task-15",
@@ -266,9 +267,42 @@
       "xpReward": 50,
       "priority": "high",
       "dueDate": "2026-06-25",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-25",
+      "notes": "Standalone quote sent per Ines's request."
+    },
+    {
+      "id": "task-28",
+      "task": "Walk-in to The Statesman: Reintroduce TossBoss to Courtney",
+      "xpReward": 150,
+      "priority": "high",
+      "dueDate": "2026-06-25",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-25",
+      "notes": "PM Courtney asked for quote by email Monday."
+    },
+    {
+      "id": "task-29",
+      "task": "Refresh Statesman standalone quote",
+      "xpReward": 25,
+      "priority": "high",
+      "dueDate": "2026-06-25",
+      "completed": true,
+      "category": "sales",
+      "completedDate": "2026-06-25",
+      "notes": "252 units, Sun-Thu, $11.50/door — matched Foundry/Heights format."
+    },
+    {
+      "id": "task-30",
+      "task": "Email Statesman quote to Courtney",
+      "xpReward": 50,
+      "priority": "high",
+      "dueDate": "2026-06-30",
       "completed": false,
       "category": "sales",
-      "notes": "Standalone quote link. Acknowledge Valet Living contract; plant seed for renewal window."
+      "notes": "Courtney requested quote Monday. Standalone link only."
     },
   ]
 }

@@ -1,8 +1,12 @@
 {
   "slug": "the-statesman",
   "businessName": "The Statesman",
-  "units": 336,
+  "units": 252,
   "strategy": "RiskAudit",
+  "serviceSchedule": "Sun-Thu",
+  "standaloneQuote": true,
+  "preparedFor": "Courtney",
+  "preparedDate": "2026-06-25",
   "reviewRiskScan": {
     "riskSignal": "Friction",
     "mentionsCount": 4,
@@ -19,16 +23,16 @@
     }
   },
   "noiOpportunity": {
-    "minAmount": 7056,
-    "maxAmount": 14112,
+    "minAmount": 5292,
+    "maxAmount": 10584,
     "currentRate": 13.25,
     "proposedRate": 11.50,
     "assumptions": [
       "Current vendor pricing: $13.25/door",
-      "TossBoss undercut pricing: $11.50/door",
-      "Total units: 336",
-      "Direct annual savings: $7,056",
-      "Potential ancillary revenue optimization: $7,000+"
+      "TossBoss pricing: $11.50/door",
+      "Total units: 252",
+      "Direct annual savings: $5,292",
+      "Potential ancillary revenue optimization: $5,000+"
     ]
   }
 }
