@@ -5,22 +5,16 @@
   "description": "Professional valet trash collection service for multi-family residential properties. Uniformed valets collect bagged trash from residents' doorsteps and transport to on-site dumpsters nightly.",
   "services": [
     {
-      "name": "Basic",
-      "frequency": "3-night",
-      "pricePerUnit": 13,
-      "description": "Sun/Tue/Thu collection"
-    },
-    {
       "name": "Standard",
       "frequency": "5-night",
-      "pricePerUnit": 15,
+      "pricePerUnit": 13,
       "description": "Sun-Thu collection",
       "popular": true
     },
     {
       "name": "Premium",
       "frequency": "5-night + recycling",
-      "pricePerUnit": 17,
+      "pricePerUnit": 15,
       "description": "Sun-Thu collection with doorstep recycling"
     }
   ],
@@ -35,7 +29,7 @@
   "website": {
     "url": "thetossboss.co",
     "status": "live",
-    "lastUpdated": "2026-02-16"
+    "lastUpdated": "2026-06-26"
   },
   "contact": {
     "phone": "678-477-8717",

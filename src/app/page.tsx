@@ -14,14 +14,13 @@ import {
 export default function MarketingPage() {
   const [scrolled, setScrolled] = useState(false);
   const [units, setUnits] = useState(200);
-  const [tier, setTier] = useState<"basic" | "standard" | "premium">("standard");
+  const [tier, setTier] = useState<"standard" | "premium">("standard");
   const [residentFee, setResidentFee] = useState(30);
 
-  const tierPrices = { basic: 13, standard: 15, premium: 17 };
+  const tierPrices = { standard: 13, premium: 15 };
   const tierNames = {
-    basic: "Basic ($13/unit)",
-    standard: "Standard ($15/unit)",
-    premium: "Premium ($17/unit)",
+    standard: "Standard ($13/unit)",
+    premium: "Premium ($15/unit)",
   };
 
   useEffect(() => {
@@ -266,7 +265,7 @@ export default function MarketingPage() {
                 Predictable NOI impact
               </h3>
               <p className="text-white/70 leading-relaxed">
-                Most properties bill residents $25–$35 per unit and pay $13–$17 per unit for service. Your NOI is the spread—plus fewer service failures and less staff time on trash.
+                Most properties bill residents $25–$35 per unit and pay $13–$15 per unit for service. Your NOI is the spread—plus fewer service failures and less staff time on trash.
               </p>
             </div>
             <div className="mt-8 h-44 bg-[#2D5A45]/20 rounded-lg flex items-center justify-center">
@@ -319,54 +318,26 @@ export default function MarketingPage() {
           <ExternalEyebrow>Plans</ExternalEyebrow>
           <ExternalHeading>Choose your service level.</ExternalHeading>
         </div>
-        <div className="grid lg:grid-cols-3 gap-6 items-stretch">
-          {/* Basic */}
-          <ExternalCard className="p-12 flex flex-col">
-            <h3 className="font-serif text-3xl mb-2">Basic</h3>
-            <div className="mb-8">
-              <span className="font-serif text-5xl">$13</span>
-              <span className="text-gray-500">/unit/month</span>
-            </div>
-            <ul className="space-y-3 mb-8 flex-1">
-              {[
-                "Example: Sun, Tue, Thu or Mon, Wed, Fri",
-                "Uniformed, professional valets",
-                "Doorstep trash collection",
-                "Resident rules + welcome template",
-                "Local support",
-              ].map((feature, idx) => (
-                <li
-                  key={idx}
-                  className="text-[15px] text-gray-700 py-2 border-b border-gray-100 last:border-0"
-                >
-                  • {feature}
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="#contact"
-              className={externalButtonClass("secondary", "mt-auto block w-full text-center")}
-            >
-              Get Started
-            </Link>
-          </ExternalCard>
-
+        <div className="grid lg:grid-cols-2 gap-6 items-stretch max-w-4xl mx-auto">
           {/* Standard - Featured */}
-          <ExternalCard tone="dark" className="p-12 relative lg:scale-105 shadow-2xl flex flex-col">
+          <ExternalCard tone="dark" className="p-12 relative shadow-2xl flex flex-col">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#2D5A45] text-white text-xs font-medium tracking-wider uppercase px-4 py-1.5 rounded-full">
               Most Popular
             </div>
             <h3 className="font-serif text-3xl mb-2">Standard</h3>
             <div className="mb-8">
-              <span className="font-serif text-5xl">$15</span>
+              <span className="font-serif text-5xl">$13</span>
               <span className="text-white/60">/unit/month</span>
             </div>
             <ul className="space-y-3 mb-8 flex-1">
               {[
-                "5-night weekly collection (Mon–Fri)",
+                "5-night weekly collection (Sun–Thu)",
+                "Uniformed, professional valets",
+                "Doorstep trash collection",
                 "Dumpster area cleanup",
+                "Resident rules + welcome template",
                 "Priority issue response",
-                "Everything in Basic",
+                "Local support",
               ].map((feature, idx) => (
                 <li
                   key={idx}
@@ -388,12 +359,12 @@ export default function MarketingPage() {
           <ExternalCard className="p-12 flex flex-col">
             <h3 className="font-serif text-3xl mb-2">Premium</h3>
             <div className="mb-8">
-              <span className="font-serif text-5xl">$17</span>
+              <span className="font-serif text-5xl">$15</span>
               <span className="text-gray-500">/unit/month</span>
             </div>
             <ul className="space-y-3 mb-8 flex-1">
               {[
-                "5-night trash collection",
+                "5-night trash collection (Sun–Thu)",
                 "Doorstep recycling collection",
                 "Dedicated point of contact",
                 "Everything in Standard",
@@ -466,7 +437,7 @@ export default function MarketingPage() {
                     <span className="font-medium text-[#7CB98A]">{tierNames[tier]}</span>
                   </div>
                   <div className="flex gap-2">
-                    {(['basic', 'standard', 'premium'] as const).map((t) => (
+                    {(['standard', 'premium'] as const).map((t) => (
                       <button
                         key={t}
                         onClick={() => setTier(t)}
@@ -725,9 +696,8 @@ export default function MarketingPage() {
                   <option value="">Select a service plan</option>
                   <option value="switching">Switching providers</option>
                   <option value="new">New valet trash program</option>
-                  <option value="basic">Basic ($13/unit)</option>
-                  <option value="standard">Standard ($15/unit)</option>
-                  <option value="premium">Premium ($17/unit)</option>
+                  <option value="standard">Standard ($13/unit)</option>
+                  <option value="premium">Premium ($15/unit)</option>
                 </select>
               </div>
               <div className="mb-6">

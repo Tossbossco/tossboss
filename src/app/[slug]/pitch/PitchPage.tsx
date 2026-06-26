@@ -428,7 +428,7 @@ export default function PitchPage({ data, reviewEvidence = [] }: PitchPageProps)
 
                 <ExternalCard tone="soft" className="rounded-xl">
                   <p className="text-sm text-gray-600 text-center">
-                    <span className="font-medium">Assumptions:</span> Based on {spark.units} units, $15/unit standard service tier,
+                    <span className="font-medium">Assumptions:</span> Based on {spark.units} units, $13/unit standard service tier,
                     and conservative estimates of complaint reduction and operational efficiency gains.
                   </p>
                 </ExternalCard>
